@@ -9,6 +9,8 @@ import TicketSalesSupport from "@/components/TicketSalesSupport";
 import HowItWorks from "@/components/HowItWorks";
 import PriceCalculator from "@/components/PriceCalculator";
 import Testimonials from "@/components/Testimonials";
+import PhotoCarousel from "@/components/PhotoCarousel";
+import VideoCarousel from "@/components/VideoCarousel";
 import UseCases from "@/components/UseCases";
 import SocialImpact from "@/components/SocialImpact";
 import FAQ from "@/components/FAQ";
@@ -31,6 +33,8 @@ export default function Home() {
         <HowItWorks />
         <PriceCalculator />
         <Testimonials />
+        <PhotoCarousel />
+        <VideoCarousel />
         <UseCases />
         <SocialImpact />
         <FAQ />

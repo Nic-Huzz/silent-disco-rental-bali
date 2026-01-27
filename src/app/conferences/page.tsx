@@ -14,21 +14,24 @@ export default function ConferencesPage() {
       company: "Amazon Web Services (AWS)",
       headsets: 280,
       exhibits: 4,
-      video: "/images/brands/videos/brand-video-6.mp4",
+      video: "/Conference Videos/aws-conference.mp4",
+      videoType: "video/mp4",
       description: "Multi-track conference with simultaneous presentations across exhibition hall",
     },
     {
       company: "EPSON",
       headsets: 100,
       exhibits: 3,
-      video: "/images/brands/videos/brand-video-4.mp4",
+      video: "/Conference Videos/epson-conference.mov",
+      videoType: "video/quicktime",
       description: "Product launch event with dedicated audio channels per demo station",
     },
     {
       company: "IBM",
       headsets: 120,
       exhibits: 2,
-      video: "/images/brands/videos/brand-video-5.mp4",
+      video: "/Conference Videos/ibm-conference.mp4",
+      videoType: "video/mp4",
       description: "Corporate conference with multilingual simultaneous translation",
     },
   ];
@@ -139,15 +142,21 @@ export default function ConferencesPage() {
               </h2>
             </div>
             <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20">
-              {/* EPSON */}
-              <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg">
-                <span className="text-3xl md:text-4xl font-bold tracking-tight text-[#003399]">EPSON</span>
-              </div>
               {/* AWS */}
               <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg">
                 <Image
-                  src="/images/brands/logos/brand-logo-6.png"
+                  src="/Conference Videos/aws-logo.png"
                   alt="AWS"
+                  width={120}
+                  height={60}
+                  className="h-10 md:h-12 w-auto"
+                />
+              </div>
+              {/* EPSON */}
+              <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg">
+                <Image
+                  src="/Conference Videos/epson-logo.png"
+                  alt="EPSON"
                   width={120}
                   height={60}
                   className="h-10 md:h-12 w-auto"
@@ -155,7 +164,13 @@ export default function ConferencesPage() {
               </div>
               {/* IBM */}
               <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg">
-                <span className="text-3xl md:text-4xl font-bold tracking-tight text-[#0530AD]">IBM</span>
+                <Image
+                  src="/Conference Videos/ibm-logo.png"
+                  alt="IBM"
+                  width={120}
+                  height={60}
+                  className="h-10 md:h-12 w-auto"
+                />
               </div>
             </div>
           </div>
@@ -186,7 +201,7 @@ export default function ConferencesPage() {
                         playsInline
                         poster=""
                       >
-                        <source src={study.video} type="video/mp4" />
+                        <source src={study.video} type={study.videoType} />
                       </video>
                       {/* Play button overlay */}
                       {playingVideo !== index && (

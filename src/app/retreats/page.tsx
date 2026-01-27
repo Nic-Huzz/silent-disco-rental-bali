@@ -1,55 +1,73 @@
 "use client";
 
-import { useState, useRef } from "react";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export default function RetreatsPage() {
-  const [playingVideo, setPlayingVideo] = useState(false);
-  const videoRef = useRef<HTMLVideoElement | null>(null);
-  const [currentSlide, setCurrentSlide] = useState(0);
-
   const testimonials = [
     {
       name: "Alyce",
       handle: "@TheMindsetAdventure",
-      image: "/images/retreats/testimonial-alyce.jpg", // PLACEHOLDER
+      image: "/Retreat/Alyce.jpg",
       content: [
-        { text: "\"Huzz's energy is unmatched!!! The absolute vibe king with a heart of gold!!", bold: false },
-        { text: "Having Nic on our Retreat was next level! ", bold: false },
-        { text: "He not only brings the vibes but he has a genuine and special way of making everyone feel safe, loved and supported! His silent discos are just like no other!", bold: true },
-        { text: "He has a unique way of holding a safe and FUN space both in Breathwork and his Silent Discos with his super inspiring presence and his compassionate heart!", bold: false },
-        { text: "There is no one like you Huzz!! Thank you 🙏\"", bold: false },
+        [
+          { text: "\"Huzz's energy is unmatched!!! The absolute vibe king with a heart of gold!!", bold: false },
+        ],
+        [
+          { text: "Having Nic on our Retreat was next level! ", bold: false },
+          { text: "He not only brings the vibes but he has a genuine and special way of making everyone feel safe, loved and supported!", bold: true },
+        ],
+        [
+          { text: "His silent discos are just like no other! He has a unique way of holding a safe and FUN space both in Breathwork and his Silent Discos with his super inspiring presence and his compassionate heart!", bold: false },
+        ],
+        [
+          { text: "There is no one like you Huzz!! Thank you 🙏\"", bold: false },
+        ],
       ],
     },
     {
       name: "Amy",
       handle: "@FIFreedomRetreats",
-      image: "/images/retreats/testimonial-amy.jpg", // PLACEHOLDER
+      image: "/Retreat/Amyphoto.jpg",
       content: [
-        { text: "I had the pleasure of working with Huzz at my recent retreat, and ", bold: false },
-        { text: "he made the experience unforgettable", bold: true },
-        { text: ". Many of the attendees had never participated in a silent disco, with some feeling uneasy about dancing. ", bold: false },
-        { text: "Huzz immediately established a warm rapport with the group, creating a safe and inviting space for everyone to feel comfortable.", bold: true },
-        { text: "His guided meditation and breath work journey was the perfect way to ease everyone into the experience, helping participants connect with their bodies and tap into a sense of fun and childlike innocence.", bold: true },
-        { text: "The transformation was palpable-by the time the silent disco began, everyone was fully engaged and ready to let loose.", bold: true },
-        { text: " The feedback from the group was overwhelmingly positive.", bold: false },
-        { text: "Many participants described the silent disco as one of the most freeing and fun experiences they've had in a long time", bold: true },
-        { text: ", and several expressed a desire to do it again the next day!", bold: false },
+        [
+          { text: "I had the pleasure of working with Huzz at my recent retreat, and ", bold: false },
+          { text: "he made the experience unforgettable", bold: true },
+          { text: ".", bold: false },
+        ],
+        [
+          { text: "Many of the attendees had never participated in a silent disco, with some feeling uneasy about dancing. ", bold: false },
+          { text: "Huzz immediately established a warm rapport with the group, creating a safe and inviting space for everyone to feel comfortable.", bold: true },
+        ],
+        [
+          { text: "His guided meditation and breath work journey was the perfect way to ease everyone into the experience, helping participants connect with their bodies and tap into a sense of fun and childlike innocence.", bold: true },
+        ],
+        [
+          { text: "The transformation was palpable — by the time the silent disco began, everyone was fully engaged and ready to let loose. The feedback from the group was overwhelmingly positive.", bold: false },
+        ],
+        [
+          { text: "Many participants described the silent disco as one of the most freeing and fun experiences they've had in a long time", bold: true },
+          { text: ", and several expressed a desire to do it again the next day!", bold: false },
+        ],
       ],
     },
     {
       name: "Kylie",
       handle: "@Kylieex.Stevenson",
-      image: "/images/retreats/testimonial-kylie.jpg", // PLACEHOLDER
+      image: "/Retreat/Kylie.jpg",
       content: [
-        { text: "We had such a blast with our silent disco at our team retreat! ", bold: false },
-        { text: "Huzz was an amazing host and truly allowed for a space of fun and expansion!", bold: true },
-        { text: "Of course we then had to have him facilitate our breathwork also. ", bold: false },
-        { text: "WOW. What a magnificent experience this was!", bold: true },
-        { text: "Cannot recommend this team more highly!", bold: false },
-        { text: "Thanks so much Huzz!", bold: false },
+        [
+          { text: "We had such a blast with our silent disco at our team retreat! ", bold: false },
+          { text: "Huzz was an amazing host and truly allowed for a space of fun and expansion!", bold: true },
+        ],
+        [
+          { text: "Of course we then had to have him facilitate our breathwork also. ", bold: false },
+          { text: "WOW. What a magnificent experience this was!", bold: true },
+        ],
+        [
+          { text: "Cannot recommend this team more highly! Thanks so much Huzz!", bold: false },
+        ],
       ],
     },
   ];
@@ -58,63 +76,22 @@ export default function RetreatsPage() {
     {
       title: "Physical",
       description: "Movement and expression",
-      image: "/images/retreats/pillar-physical.jpg", // PLACEHOLDER
+      image: "/Photo Carousel/carousel-6.jpg",
+      imagePosition: "object-[center_45%]",
     },
     {
       title: "Emotional",
       description: "Creating a space for people to express",
-      image: "/images/retreats/pillar-emotional.jpg", // PLACEHOLDER
+      image: "/Photo Carousel/carousel-10.png",
+      imagePosition: "object-[center_30%]",
     },
     {
       title: "Mental",
       description: "Grounding and presence through breathwork + meditation",
-      image: "/images/retreats/pillar-mental.jpg", // PLACEHOLDER
+      image: "/Photo Carousel/carousel-2.jpg",
+      imagePosition: "object-center",
     },
   ];
-
-  const retreatPartners = [
-    {
-      name: "The Mindset Adventure",
-      image: "/images/retreats/partner-mindset.jpg", // PLACEHOLDER
-      link: "#",
-    },
-    {
-      name: "Sons of the West",
-      image: "/images/retreats/partner-sons.jpg", // PLACEHOLDER
-      link: "#",
-    },
-    {
-      name: "Kylie Stevenson",
-      image: "/images/retreats/partner-kylie.jpg", // PLACEHOLDER
-      link: "#",
-    },
-    {
-      name: "FI Freedom Retreats",
-      image: "/images/retreats/partner-fi.jpg", // PLACEHOLDER
-      link: "#",
-    },
-  ];
-
-  const handleVideoClick = () => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    if (playingVideo) {
-      video.pause();
-      setPlayingVideo(false);
-    } else {
-      video.play();
-      setPlayingVideo(true);
-    }
-  };
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % (retreatPartners.length - 2));
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + (retreatPartners.length - 2)) % (retreatPartners.length - 2));
-  };
 
   return (
     <>
@@ -125,38 +102,157 @@ export default function RetreatsPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <p className="text-[#5e17eb] font-semibold mb-3">Transformative Retreat Experiences</p>
+                <p className="text-[#5e17eb] font-semibold mb-3">Give Your Guests an Unforgettable Experience</p>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
                   Vibe Rise Dance Journey
                 </h1>
-                <p className="text-gray-700 mb-4">
-                  Vibe Rise Dance Journey is best described as creating a space for your playful, care-free,
-                  loving essence to be expressed. A journey designed to leave you feeling high on life.
+                <p className="text-xl text-gray-700 mb-4">
+                  The perfect way to start the day or celebrate the night — naturally.
                 </p>
-                <p className="text-gray-700 mb-4">
-                  A short round of breathwork and meditation drops us into this energy. Followed by 30
-                  minutes of dancing that can be best described as when you&apos;re 7 years old going nuts
-                  dancing to your favourite songs.
+                <p className="text-gray-600 mb-4">
+                  Your guests didn&apos;t come to Bali to sit through another workshop they&apos;ll forget.
+                  They came to <span className="font-semibold">feel alive again</span>.
                 </p>
-                <p className="text-[#5e17eb] font-medium">
-                  See what Retreat Hosts have had to say about the experience below:
+                <p className="text-gray-600 mb-4">
+                  Vibe Rise is a guided meditation → breathwork → dance journey that gives your participants
+                  everything their body, mind, and soul need to feel on top of the world.
                 </p>
               </div>
               <div className="relative">
-                {/* PLACEHOLDER IMAGE */}
-                <div className="relative aspect-[3/4] max-w-md mx-auto rounded-2xl overflow-hidden bg-gray-200">
-                  <Image
-                    src="/images/retreats/hero-dance.jpg"
-                    alt="Dancing at retreat"
-                    fill
-                    className="object-cover"
-                  />
-                  {/* "Dance" label */}
-                  <div className="absolute bottom-8 right-8 bg-white/80 px-4 py-2 rounded-lg">
-                    <span className="text-gray-800 font-handwriting text-xl italic">Dance</span>
-                  </div>
+                <div className="relative aspect-[9/16] max-w-sm mx-auto rounded-2xl overflow-hidden bg-gray-900 shadow-lg">
+                  <video
+                    className="w-full h-full object-cover"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    controls
+                  >
+                    <source src="/Retreat/Retreat Videos/retreat-video-2.mov" type="video/quicktime" />
+                  </video>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* What to Expect Section */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto">
+              <div className="text-center mb-12">
+                <p className="text-[#5e17eb] font-semibold mb-2">What Your Guests Will Experience</p>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+                  What to Expect
+                </h2>
+              </div>
+              <div className="space-y-6 text-gray-600">
+                <div className="flex gap-4">
+                  <span className="text-2xl">🧘</span>
+                  <p><span className="font-semibold text-gray-900">Guided meditation</span> to drop into the body and let go of the busy mind</p>
+                </div>
+                <div className="flex gap-4">
+                  <span className="text-2xl">🌬️</span>
+                  <p><span className="font-semibold text-gray-900">Breathwork</span> to open the heart and release stuck energy</p>
+                </div>
+                <div className="flex gap-4">
+                  <span className="text-2xl">🎧</span>
+                  <p><span className="font-semibold text-gray-900">Silent disco dance journey</span> — 30 minutes of pure, uninhibited joy</p>
+                </div>
+                <div className="flex gap-4">
+                  <span className="text-2xl">🤝</span>
+                  <p><span className="font-semibold text-gray-900">Deep connection</span> — participants bond in ways that conversation alone can&apos;t create</p>
+                </div>
+              </div>
+              <p className="text-center text-gray-700 mt-8 font-medium">
+                Whether your guests come solo or with friends, they&apos;ll leave feeling clear, connected, and buzzing — in the best way.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Not Just Dance Section */}
+        <section className="py-20 bg-gradient-to-br from-[#5e17eb]/5 to-[#5e17eb]/10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto text-center">
+              <p className="text-[#5e17eb] font-semibold mb-2">More Than Entertainment</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+                Not Just Dance — A Vibe Reboot
+              </h2>
+              <div className="space-y-4 text-gray-600 text-left md:text-center">
+                <p>
+                  You know that euphoric moment at the <span className="italic">peak</span> of a dance journey?
+                </p>
+                <p>
+                  Vibe Rise is designed to give your participants that feeling — <span className="font-semibold text-gray-900">but for the whole set</span>.
+                </p>
+                <p>
+                  We use meditation, breathwork, and music to reconnect them to that version of themselves
+                  who loves to dance, play, and have fun.
+                </p>
+                <p className="text-[#5e17eb] font-semibold text-lg pt-4">
+                  It&apos;s a journey that&apos;s been described as an explosion of joy.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Who It's For Section */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto">
+              <div className="text-center mb-12">
+                <p className="text-[#5e17eb] font-semibold mb-2">Perfect Fit</p>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+                  Who It&apos;s For
+                </h2>
+              </div>
+              <p className="text-gray-700 mb-6 text-center">
+                Whether you&apos;re looking for an energising morning session to start the day right, or a celebratory evening experience to cap off an amazing retreat — Vibe Rise fits perfectly. Book it if you want to give your participants:
+              </p>
+              <ul className="space-y-4 text-gray-600">
+                <li className="flex items-start gap-3">
+                  <span className="w-6 h-6 bg-[#ffdd27] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg className="w-4 h-4 text-[#5e17eb]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  <span>A memorable Bali experience they&apos;ll talk about long after the retreat ends</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-6 h-6 bg-[#ffdd27] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg className="w-4 h-4 text-[#5e17eb]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  <span>A way to feel amazing without alcohol or late nights</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-6 h-6 bg-[#ffdd27] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg className="w-4 h-4 text-[#5e17eb]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  <span>Permission to dance, play, and let loose — even if they &quot;don&apos;t usually dance&quot;</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-6 h-6 bg-[#ffdd27] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg className="w-4 h-4 text-[#5e17eb]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  <span>Connection, movement, and energy that bonds your group</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-6 h-6 bg-[#ffdd27] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg className="w-4 h-4 text-[#5e17eb]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  <span>Transformation that happens naturally — no forcing, no awkwardness</span>
+                </li>
+              </ul>
             </div>
           </div>
         </section>
@@ -190,70 +286,19 @@ export default function RetreatsPage() {
                     <p className="text-[#5e17eb]">{testimonial.handle}</p>
                   </div>
                   {/* Testimonial Content */}
-                  <div className="text-gray-700 text-sm leading-relaxed">
-                    {testimonial.content.map((segment, i) => (
-                      <span key={i} className={segment.bold ? "font-semibold" : ""}>
-                        {segment.text}
-                      </span>
+                  <div className="text-gray-700 text-sm leading-relaxed space-y-3">
+                    {testimonial.content.map((paragraph, pIndex) => (
+                      <p key={pIndex}>
+                        {paragraph.map((segment, sIndex) => (
+                          <span key={sIndex} className={segment.bold ? "font-semibold" : ""}>
+                            {segment.text}
+                          </span>
+                        ))}
+                      </p>
                     ))}
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Sneak Peak Section */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              {/* Video */}
-              <div
-                className="relative aspect-[9/16] max-w-sm mx-auto rounded-2xl overflow-hidden bg-gray-900 cursor-pointer group"
-                onClick={handleVideoClick}
-              >
-                <video
-                  ref={videoRef}
-                  className="w-full h-full object-cover"
-                  loop
-                  muted
-                  playsInline
-                >
-                  <source src="/images/retreats/sneak-peak-video.mp4" type="video/mp4" /> {/* PLACEHOLDER */}
-                </video>
-                {/* Play button overlay */}
-                {!playingVideo && (
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
-                    <div className="text-white text-center">
-                      <p className="mb-4 text-lg">How it starts...</p>
-                      <div className="w-16 h-16 bg-white/20 border-2 border-white rounded-full flex items-center justify-center mx-auto">
-                        <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M8 5v14l11-7z" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              {/* Text Content */}
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-[#5e17eb] mb-8">
-                  Sneak Peak 👀
-                </h2>
-                <div className="space-y-4 text-[#5e17eb]">
-                  <p>I invite you to take a moment to visualise you as a kid.</p>
-                  <p>Reflect on how playful you were, how full of love, how care-free.</p>
-                  <p>I believe we&apos;re still those small people in big people&apos;s bodies.</p>
-                  <p>
-                    But as we grow up it&apos;s like we lose the spaces and permission to let this
-                    playful, care-free, loving version be expressed.
-                  </p>
-                  <p className="font-medium">
-                    This is your invitation for this version of you to come out and play:
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -276,7 +321,7 @@ export default function RetreatsPage() {
                       src={pillar.image}
                       alt={pillar.title}
                       fill
-                      className="object-cover"
+                      className={`object-cover ${pillar.imagePosition}`}
                     />
                   </div>
                   {/* Content */}
@@ -290,55 +335,93 @@ export default function RetreatsPage() {
           </div>
         </section>
 
-        {/* Let's Celebrate Gallery */}
+        {/* Video Section 2 - The Energy Is Real */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#5e17eb] text-center mb-12">
-              Let&apos;s Celebrate
-            </h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              {/* PLACEHOLDER IMAGES */}
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gray-200">
-                <Image
-                  src="/images/retreats/celebrate-1.jpg"
-                  alt="Celebration at bamboo venue"
-                  fill
-                  className="object-cover"
-                />
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="order-2 md:order-1">
+                <p className="text-[#5e17eb] font-semibold mb-2">See It In Action</p>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                  The Energy Is Real
+                </h2>
+                <div className="space-y-4 text-gray-600">
+                  <p>Watch what happens when people give themselves permission to move freely.</p>
+                  <p className="font-medium text-gray-900">No judgement. No choreography. Just pure, authentic expression.</p>
+                  <p>This is what your guests will experience — a space where they can truly let go.</p>
+                  <p className="text-gray-500 italic pt-2">
+                    We invite participants to visualise themselves as a kid — playful, full of love, care-free. We&apos;re still those small people in big people&apos;s bodies. This experience is an invitation for that version to come out and play.
+                  </p>
+                </div>
               </div>
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gray-200">
-                <Image
-                  src="/images/retreats/celebrate-2.jpg"
-                  alt="Dancing at retreat"
-                  fill
-                  className="object-cover"
-                />
+              <div className="order-1 md:order-2">
+                <div className="relative aspect-[9/16] max-w-sm mx-auto rounded-2xl overflow-hidden bg-gray-900 shadow-xl">
+                  <video
+                    className="w-full h-full object-cover"
+                    controls
+                    playsInline
+                    preload="metadata"
+                  >
+                    <source src="/Video carousel/video-3.mp4" type="video/mp4" />
+                  </video>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* Get in Touch Section */}
-        <section className="py-16 bg-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-            {/* Decorative elements */}
-            <div className="absolute left-8 top-8 w-6 h-6 bg-pink-300 rotate-45 opacity-60"></div>
-            <div className="absolute right-12 top-12 w-8 h-8 border-4 border-[#5e17eb]/30 rounded-full"></div>
-
-            <h2 className="text-3xl md:text-4xl font-bold text-[#5e17eb] mb-4">
-              Get in Touch
+        <section className="py-20 bg-gradient-to-br from-[#5e17eb] to-[#4a0ea8]">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p className="text-[#ffdd27] font-semibold mb-2">Let&apos;s Chat</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Book Vibe Rise for Your Retreat
             </h2>
-            <p className="text-gray-600 mb-8">
-              Have questions or need a quote for your upcoming event?
+            <p className="text-white/80 mb-8 max-w-2xl mx-auto">
+              Have questions about how Vibe Rise can fit into your retreat schedule?
+              Let&apos;s discuss how to create an unforgettable experience for your participants.
             </p>
             <a
-              href="https://wa.me/6282266355322?text=Hi! I'm interested in silent disco for my retreat."
+              href="https://wa.me/6282266355322?text=Hi! I'm a retreat host interested in booking Vibe Rise Dance Journey for my participants."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#5e17eb] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#4a0ea8] transition-colors"
+              className="inline-flex items-center gap-3 bg-white text-[#5e17eb] px-8 py-4 rounded-full font-semibold hover:bg-[#ffdd27] transition-colors text-lg"
             >
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
               Send WhatsApp Message
             </a>
+          </div>
+        </section>
+
+        {/* Video Section 3 */}
+        <section className="py-20 bg-gradient-to-br from-[#5e17eb]/5 to-[#5e17eb]/10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="relative aspect-[9/16] max-w-sm mx-auto rounded-2xl overflow-hidden bg-gray-900 shadow-xl">
+                  <video
+                    className="w-full h-full object-cover"
+                    controls
+                    playsInline
+                    preload="metadata"
+                  >
+                    <source src="/Video carousel/video-4.mp4" type="video/mp4" />
+                  </video>
+                </div>
+              </div>
+              <div>
+                <p className="text-[#5e17eb] font-semibold mb-2">Feel The Vibe</p>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                  This Could Be Your Retreat
+                </h2>
+                <div className="space-y-4 text-gray-600">
+                  <p>Every retreat is different, but the feeling is always the same.</p>
+                  <p className="font-medium text-gray-900">Connection. Joy. Freedom.</p>
+                  <p>Imagine your guests leaving with this energy — ready to take on the world.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -362,26 +445,43 @@ export default function RetreatsPage() {
                   </a>
                 </div>
 
-                <div className="space-y-4 text-[#5e17eb]">
+                <div className="space-y-4 text-gray-700">
                   <p>My mission in life is to empower people to dance both literally and metaphorically.</p>
                   <p>Literally through leading joy-fuelled dance experiences.</p>
                   <p>Metaphorically through experiences that empower people to feel safe enough to be themselves.</p>
                   <p>To date I&apos;ve run over 100 dance experiences in 5 countries (and counting).</p>
-                  <p>When I&apos;m not dancing, I&apos;m frequently hired for:</p>
+                  <p>I&apos;m frequently hired for my <span className="font-semibold">Healing But Fun</span> experiences:</p>
+
+                  <div className="bg-gray-100 rounded-xl p-4 space-y-3">
+                    <p className="font-semibold text-gray-900">Healing Compass</p>
+                    <p className="text-sm">Do your participants feel like they were made for more? Like their essence is pulling them up, but something is pulling them back?</p>
+                    <p className="text-sm">In the Healing Compass they will learn exactly what emotional splinters (traumas) are keeping them stuck so they can finally free themselves from what has quietly been sabotaging their progress.</p>
+                  </div>
+
+                  <div className="bg-gray-100 rounded-xl p-4 space-y-3">
+                    <p className="font-semibold text-gray-900">Conscious Connected Breathwork &amp; Somatic Movement</p>
+                    <p className="text-sm">Bali&apos;s best emotional release breathwork experience combining deep cathartic releases with somatic movement.</p>
+                    <p className="text-sm">Inspired by polyvagal theory, this experience combines laying down breathwork with the somatic understanding that how we &apos;release&apos; trauma isn&apos;t limited to emotions but movements like shaking.</p>
+                  </div>
+
+                  <div className="bg-gray-100 rounded-xl p-4 space-y-3">
+                    <p className="font-semibold text-gray-900">Rewire Subconscious Limiting Beliefs</p>
+                    <p className="text-sm">We don&apos;t rise to the level of our ambitions, we fall to the level of what feels safe.</p>
+                    <p className="text-sm">This workshop identifies the emotional splinters that have caused participants&apos; ambitions to feel unsafe, and guides them through an NLP process to begin the rewiring process.</p>
+                  </div>
+
                   <p>
-                    <span className="font-semibold">Breathwork:</span> I&apos;m a certified practitioner in conscious connected
-                    breathwork, completing 400 hour teacher training in Koh Phangan, Thailand.
-                  </p>
-                  <p>I&apos;m currently the resident breathwork facilitator at Mantra Wellness in Uluwatu.</p>
-                  <p>
-                    <span className="font-semibold">Rewiring Subconscious Limiting Beliefs Workshop:</span> I&apos;m a certified
-                    neurolinguistic programming (NLP) practitioner.
-                  </p>
-                  <p>
-                    I currently host this workshop weekly at The Space in Uluwatu and have run it for a number of
-                    corporate clients including{" "}
-                    <a href="#" className="underline hover:no-underline">Start With Hex</a> and{" "}
-                    <a href="#" className="underline hover:no-underline">Write of Passage</a>.
+                    <a
+                      href="https://retreats.nichuzz.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-[#5e17eb] font-semibold hover:underline"
+                    >
+                      Learn more about my retreat offerings
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
                   </p>
                 </div>
               </div>
@@ -390,7 +490,7 @@ export default function RetreatsPage() {
               <div className="relative">
                 <div className="relative aspect-[3/4] max-w-md mx-auto rounded-2xl overflow-hidden bg-gray-200">
                   <Image
-                    src="/images/retreats/nic-huzz.jpg"
+                    src="/images/About me.jpg"
                     alt="Nic Huzz"
                     fill
                     className="object-cover"
@@ -399,76 +499,29 @@ export default function RetreatsPage() {
               </div>
             </div>
 
-            {/* Retreats I've worked with carousel */}
-            <div className="mt-16">
-              <p className="text-[#5e17eb] text-center mb-8">
-                Retreats I&apos;ve worked with (click image to see profile):
-              </p>
-              <div className="relative max-w-2xl mx-auto">
-                {/* Navigation Arrows */}
-                <button
-                  onClick={prevSlide}
-                  className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 text-gray-400 hover:text-[#5e17eb] transition-colors z-10"
-                >
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                  </svg>
-                </button>
-                <button
-                  onClick={nextSlide}
-                  className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 text-gray-400 hover:text-[#5e17eb] transition-colors z-10"
-                >
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-
-                {/* Carousel Items */}
-                <div className="flex justify-center items-center gap-8">
-                  {retreatPartners.slice(currentSlide, currentSlide + 3).map((partner, index) => (
-                    <a
-                      key={index}
-                      href={partner.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block"
-                    >
-                      <div className="w-28 h-28 rounded-full overflow-hidden bg-gray-200 relative hover:scale-105 transition-transform">
-                        <Image
-                          src={partner.image}
-                          alt={partner.name}
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </div>
           </div>
         </section>
 
         {/* Final CTA */}
         <section className="py-20 bg-gradient-to-br from-[#5e17eb] to-[#4a0ea8]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p className="text-[#ffdd27] font-semibold mb-2">Ready to Get Started?</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Create Magic at Your Retreat?
+              Give Your Guests an Experience They&apos;ll Never Forget
             </h2>
             <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
-              Let&apos;s bring the transformative power of silent disco and breathwork to your next retreat experience.
+              Vibe Rise isn&apos;t just another activity — it&apos;s the highlight of your retreat.
+              Let&apos;s create something magical together.
             </p>
             <a
-              href="https://wa.me/6282266355322?text=Hi! I'm interested in booking Vibe Rise Dance Journey for my retreat."
+              href="https://wa.me/6282266355322?text=Hi! I'm a retreat host interested in booking Vibe Rise Dance Journey for my participants."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-white text-[#5e17eb] px-8 py-4 rounded-full font-semibold hover:bg-[#ffdd27] transition-colors text-lg"
+              className="inline-flex items-center gap-3 bg-[#ffdd27] text-[#5e17eb] px-8 py-4 rounded-full font-semibold hover:bg-white transition-colors text-lg"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
               </svg>
-              Send WhatsApp Message
+              Book Vibe Rise for Your Retreat
             </a>
           </div>
         </section>
