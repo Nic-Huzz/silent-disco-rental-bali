@@ -5,12 +5,11 @@ export default function UseCases() {
     {
       title: "Running a Retreat?",
       subtitle: "Guided Wellness Experiences",
-      description: "Silent disco adds a unique dimension to yoga retreats, meditation sessions, and breathwork. Create shared experiences without disturbing others.",
+      description: "Wireless headsets add a unique dimension to your retreat sessions. They allow you to take your participants deeper with the ability to block out all other noise, leaving only the music and your voice — whether it's for breathwork, meditations, or any guided experiences.",
       features: [
-        "Perfect for sound healing sessions",
-        "Guided meditation with multiple instructors",
+        "Perfect for guided experiences",
         "Morning ecstatic dance without noise complaints",
-        "Unique bonding experience for groups",
+        "Deeper healing sessions",
       ],
       image: "/images/why-section/why-breathwork.jpg",
       cta: "Explore Retreat Packages",
@@ -25,16 +24,16 @@ export default function UseCases() {
         "No venue noise restrictions",
         "Used by AWS, IBM, Epson & more",
       ],
-      image: "/images/silent-disco-event.jpg",
+      image: "/images/founder-icon-3 copy.jpg",
       cta: "Explore Conference Solutions",
     },
   ];
 
   const eventTypes = [
     { name: "Beach Club Parties", image: "/images/testimonials/testimonial-4.jpg" },
-    { name: "Corporate Events", image: "/images/silent-disco-event.jpg" },
-    { name: "Wellness Retreats", image: "/images/why-section/why-breathwork.jpg" },
-    { name: "Private Parties", image: "/images/testimonials/testimonial-2.jpg" },
+    { name: "Corporate Events", image: "/images/founder-icon-3 copy.jpg" },
+    { name: "Wellness Retreats", image: "/images/founder-icon-2.jpg" },
+    { name: "Private Parties", image: "/images/DSC08712-15 copy.jpg" },
   ];
 
   return (
@@ -43,7 +42,7 @@ export default function UseCases() {
         {/* Event Types Gallery */}
         <div className="mb-20">
           <div className="text-center mb-12">
-            <p className="text-[#1400FF] font-semibold mb-2">Versatile Solutions</p>
+            <p className="text-[#5e17eb] font-semibold mb-2">Versatile Solutions</p>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
               From Beach Parties to Conferences
             </h2>
@@ -72,7 +71,7 @@ export default function UseCases() {
           {useCases.map((useCase, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-[#FFD6E8]/30 to-[#FFD6E8]/10 rounded-3xl overflow-hidden"
+              className="bg-gradient-to-br from-[#5e17eb]/10 to-[#5e17eb]/5 rounded-3xl overflow-hidden"
             >
               <div className="relative h-64">
                 <Image
@@ -84,14 +83,14 @@ export default function UseCases() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
               </div>
               <div className="p-8">
-                <p className="text-[#1400FF] font-semibold text-sm mb-1">{useCase.subtitle}</p>
+                <p className="text-[#5e17eb] font-semibold text-sm mb-1">{useCase.subtitle}</p>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{useCase.title}</h3>
                 <p className="text-gray-600 mb-6">{useCase.description}</p>
 
                 <ul className="space-y-3 mb-8">
                   {useCase.features.map((feature, i) => (
                     <li key={i} className="flex items-center gap-3 text-gray-700">
-                      <svg className="w-5 h-5 text-[#1400FF] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-5 h-5 text-[#5e17eb] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
                       {feature}
@@ -103,7 +102,7 @@ export default function UseCases() {
                   href="https://wa.me/6282266355322"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-[#1400FF] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#0f00cc] transition-colors"
+                  className="inline-flex items-center gap-2 bg-[#5e17eb] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#4a0ea8] transition-colors"
                 >
                   {useCase.cta}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

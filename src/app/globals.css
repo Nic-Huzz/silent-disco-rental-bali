@@ -3,10 +3,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary: #1400FF;
-  --primary-dark: #0f00cc;
-  --secondary: #FFD6E8;
-  --accent: #FF6B9D;
+  --primary: #5e17eb;
+  --primary-dark: #4a0ea8;
+  --primary-light: #7c3aed;
+  --secondary: #ffdd27;
+  --secondary-dark: #f59e0b;
+  --accent: #10B981;
 }
 
 @theme inline {
@@ -24,10 +26,12 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* Custom scrollbar */
@@ -51,8 +55,8 @@ html {
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(20, 0, 255, 0.3); }
-  50% { box-shadow: 0 0 40px rgba(20, 0, 255, 0.5); }
+  0%, 100% { box-shadow: 0 0 20px rgba(94, 23, 235, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(94, 23, 235, 0.5); }
 }
 
 .animate-float {
@@ -76,4 +80,120 @@ html {
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+}
+
+/* Brand logo video styles */
+.brand-logo {
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.brand-logo:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(94, 23, 235, 0.15);
+}
+
+.brand-logo-img {
+  max-height: 60px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.brand-logo:hover .brand-logo-img,
+.brand-logo.active .brand-logo-img {
+  opacity: 0;
+}
+
+.brand-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  border-radius: 12px;
+}
+
+.brand-logo:hover .brand-video,
+.brand-logo.active .brand-video {
+  opacity: 1;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  /* Improve tap targets */
+  button, a, [role="button"] {
+    min-height: 44px;
+  }
+
+  /* Better text sizing on mobile */
+  html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* Reduce animations on mobile for performance */
+  .animate-float {
+    animation: none;
+  }
+
+  /* Hide scrollbar on mobile */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Brand logos smaller on mobile */
+  .brand-logo {
+    min-height: 120px;
+    padding: 1.25rem;
+  }
+
+  .brand-logo-img {
+    max-height: 50px;
+  }
+}
+
+/* Safe area for notched phones */
+@supports (padding: env(safe-area-inset-bottom)) {
+  .fixed.bottom-4 {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Smooth scroll offset for fixed header */
+html {
+  scroll-padding-top: 80px;
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 64px;
+  }
+}
+
+/* Touch feedback */
+@media (hover: none) {
+  .active\:scale-\[0\.98\]:active {
+    transform: scale(0.98);
+  }
 }

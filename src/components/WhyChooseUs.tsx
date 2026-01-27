@@ -5,12 +5,12 @@ export default function WhyChooseUs() {
     {
       title: "Premium Quality",
       description: "Best in market headsets: Noise-cancelling + Hi-Fi sound quality for an immersive experience.",
-      image: "/images/equipment-headset.jpg",
+      image: "/images/product-showcase.jpg",
     },
     {
       title: "Best Prices",
       description: "Competitive rates without sacrificing quality. Transparent pricing with no hidden fees.",
-      image: "/images/testimonials/testimonial-2.jpg",
+      image: "/images/Best prices.jpg",
     },
     {
       title: "Experience",
@@ -20,7 +20,7 @@ export default function WhyChooseUs() {
     {
       title: "Trusted Partner",
       description: "Used by Bali's biggest event organisers including Sunday's Beach Club, Echo events, AWS & IBM.",
-      image: "/images/testimonials/testimonial-3.jpg",
+      image: "/images/founder-icon-3 copy.jpg",
     },
   ];
 
@@ -28,7 +28,7 @@ export default function WhyChooseUs() {
     <section id="why-us" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <p className="text-[#1400FF] font-semibold mb-2">Why Choose Us</p>
+          <p className="text-[#5e17eb] font-semibold mb-2">Why Choose Us</p>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             The Silent Disco Experts
           </h2>
@@ -41,7 +41,7 @@ export default function WhyChooseUs() {
           {reasons.map((reason, index) => (
             <div
               key={index}
-              className="group relative bg-[#FFD6E8]/10 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300"
+              className="group relative bg-[#5e17eb]/5 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300"
             >
               <div className="flex flex-col sm:flex-row">
                 <div className="relative w-full sm:w-2/5 aspect-square sm:aspect-auto">
@@ -53,7 +53,7 @@ export default function WhyChooseUs() {
                   />
                 </div>
                 <div className="p-6 sm:w-3/5 flex flex-col justify-center">
-                  <h3 className="text-xl font-bold text-[#1400FF] mb-2">
+                  <h3 className="text-xl font-bold text-[#5e17eb] mb-2">
                     {reason.title}
                   </h3>
                   <p className="text-gray-600">{reason.description}</p>

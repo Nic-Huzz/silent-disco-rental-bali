@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-16">
+    <footer className="bg-gray-900 text-white py-16 pb-24 md:pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand */}
@@ -12,14 +12,14 @@ export default function Footer() {
             </Link>
             <p className="text-gray-400 mb-6 max-w-md">
               Bali&apos;s largest, best quality and most affordable silent disco rental provider.
-              Creating amazing audio experiences for parties, conferences, and retreats since 2019.
+              Creating amazing audio experiences for parties, conferences, and retreats since 2023.
             </p>
             <div className="flex gap-4">
               <a
                 href="https://instagram.com/silentdiscorentalbali"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#1400FF] transition-colors"
+                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#5e17eb] transition-colors"
                 aria-label="Instagram"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -30,7 +30,7 @@ export default function Footer() {
                 href="https://wa.me/6282266355322"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#1400FF] transition-colors"
+                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#5e17eb] transition-colors"
                 aria-label="WhatsApp"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
