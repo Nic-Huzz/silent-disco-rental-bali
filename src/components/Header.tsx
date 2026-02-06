@@ -1,22 +1,42 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import LanguageToggle from "./LanguageToggle";
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMoreMenuOpen, setIsMoreMenuOpen] = useState(false);
+  const moreMenuRef = useRef<HTMLDivElement>(null);
 
-  const navItems = [
+  // Primary nav items shown inline on desktop
+  const primaryNavItems = [
     { label: "Home", href: "/" },
     { label: "Conferences", href: "/conferences" },
     { label: "Retreats", href: "/retreats" },
     { label: "Our Story", href: "/our-story" },
     { label: "Buy Headsets", href: "/buy-headsets" },
+  ];
+
+  // Secondary nav items in hamburger dropdown
+  const secondaryNavItems = [
     { label: "Blog", href: "/blog" },
     { label: "FAQ", href: "/faq" },
     { label: "Contact", href: "/#contact" },
   ];
+
+  const allNavItems = [...primaryNavItems, ...secondaryNavItems];
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (moreMenuRef.current && !moreMenuRef.current.contains(event.target as Node)) {
+        setIsMoreMenuOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass border-b border-gray-100">
@@ -31,7 +51,7 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
+            {primaryNavItems.map((item) => (
               <Link
                 key={item.label}
                 href={item.href}
@@ -40,6 +60,35 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
+
+            {/* More menu (hamburger) */}
+            <div className="relative" ref={moreMenuRef}>
+              <button
+                onClick={() => setIsMoreMenuOpen(!isMoreMenuOpen)}
+                className="p-2 rounded-lg hover:bg-gray-100 transition-colors text-gray-700 hover:text-[#5e17eb]"
+                aria-label="More pages"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+
+              {/* Dropdown */}
+              {isMoreMenuOpen && (
+                <div className="absolute right-0 top-full mt-2 w-44 bg-white rounded-xl shadow-lg border border-gray-100 py-2">
+                  {secondaryNavItems.map((item) => (
+                    <Link
+                      key={item.label}
+                      href={item.href}
+                      onClick={() => setIsMoreMenuOpen(false)}
+                      className="block px-4 py-2.5 text-gray-700 hover:text-[#5e17eb] hover:bg-gray-50 transition-colors font-medium"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           </nav>
 
           {/* CTA Button & Language Toggle */}
@@ -60,12 +109,12 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
             aria-label="Toggle menu"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {isMenuOpen ? (
+              {isMobileMenuOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               ) : (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
@@ -75,14 +124,14 @@ export default function Header() {
         </div>
 
         {/* Mobile Menu */}
-        {isMenuOpen && (
+        {isMobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-100">
             <nav className="flex flex-col space-y-4">
-              {navItems.map((item) => (
+              {allNavItems.map((item) => (
                 <Link
                   key={item.label}
                   href={item.href}
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => setIsMobileMenuOpen(false)}
                   className="text-gray-700 hover:text-[#5e17eb] transition-colors font-medium px-2"
                 >
                   {item.label}
