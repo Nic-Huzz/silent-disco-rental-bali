@@ -24,7 +24,7 @@ export default function Hero() {
         <div className="relative aspect-[4/3] sm:aspect-[16/10] w-full overflow-hidden">
           <Image
             src="/images/hero-headphones.jpg"
-            alt="Person enjoying silent disco headphones at sunset in Bali"
+            alt="Silent disco rental Bali - premium wireless headphones for hire at sunset beach party"
             fill
             className="object-cover object-center"
             priority
@@ -45,18 +45,20 @@ export default function Hero() {
             </span>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 md:mb-6">
-              Ready for an
+              Silent Disco Headphones:
               <br />
+              Create
+              {" "}
               <span
                 className="bg-clip-text text-transparent"
                 style={{
                   backgroundImage: 'linear-gradient(135deg, #ffdd27, #f59e0b)'
                 }}
               >
-                amazing
+                Amazing
               </span>
               <br />
-              audio experience?
+              Audio Experiences
             </h1>
 
             <div className="space-y-3 md:space-y-4 text-base md:text-lg text-white/85 mb-6 md:mb-8 max-w-lg">
@@ -125,7 +127,7 @@ export default function Hero() {
             <div className="relative aspect-[4/5] w-full max-w-lg mx-auto">
               <Image
                 src="/images/hero-headphones.jpg"
-                alt="Person enjoying silent disco headphones at sunset in Bali"
+                alt="Silent disco rental Bali - premium wireless headphones for hire at sunset beach party"
                 fill
                 className="object-cover rounded-2xl"
                 style={{

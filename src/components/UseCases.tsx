@@ -12,6 +12,7 @@ export default function UseCases() {
         "Deeper healing sessions",
       ],
       image: "/images/why-section/why-breathwork.jpg",
+      alt: "Silent disco breathwork retreat session in Bali with wireless headsets",
       cta: "Explore Retreat Packages",
     },
     {
@@ -25,15 +26,16 @@ export default function UseCases() {
         "Used by AWS, IBM, Epson & more",
       ],
       image: "/images/founder-icon-3 copy.jpg",
+      alt: "Silent disco conference headsets for corporate events in Bali",
       cta: "Explore Conference Solutions",
     },
   ];
 
   const eventTypes = [
-    { name: "Beach Club Parties", image: "/images/testimonials/testimonial-4.jpg" },
-    { name: "Corporate Events", image: "/images/founder-icon-3 copy.jpg" },
-    { name: "Wellness Retreats", image: "/images/founder-icon-2.jpg" },
-    { name: "Private Parties", image: "/images/DSC08712-15 copy.jpg" },
+    { name: "Beach Club Parties", image: "/images/testimonials/testimonial-4.jpg", alt: "Silent disco beach club party in Bali" },
+    { name: "Corporate Events", image: "/images/founder-icon-3 copy.jpg", alt: "Silent disco corporate event with wireless headsets" },
+    { name: "Wellness Retreats", image: "/images/founder-icon-2.jpg", alt: "Silent disco wellness retreat experience in Bali" },
+    { name: "Private Parties", image: "/images/DSC08712-15 copy.jpg", alt: "Private silent disco party with LED headphones" },
   ];
 
   return (
@@ -53,7 +55,7 @@ export default function UseCases() {
               <div key={index} className="group relative aspect-[4/3] rounded-2xl overflow-hidden">
                 <Image
                   src={event.image}
-                  alt={event.name}
+                  alt={event.alt}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -76,7 +78,7 @@ export default function UseCases() {
               <div className="relative h-64">
                 <Image
                   src={useCase.image}
-                  alt={useCase.title}
+                  alt={useCase.alt}
                   fill
                   className="object-cover"
                 />

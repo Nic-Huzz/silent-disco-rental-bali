@@ -115,7 +115,7 @@ export default function ClientLogos() {
             >
               <Image
                 src={client.logo}
-                alt={client.name}
+                alt={`${client.name} - silent disco rental client in Bali`}
                 width={160}
                 height={80}
                 className={`brand-logo-img object-contain w-auto ${client.larger ? 'h-20 md:h-24' : 'h-12'}`}

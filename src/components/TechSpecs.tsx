@@ -52,7 +52,7 @@ export default function TechSpecs() {
         <div className="text-center mb-8 md:mb-12">
           <p className="text-[#5e17eb] font-semibold mb-2">Premium Equipment</p>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-            Technical Specifications
+            Our Headset Specifications
           </h2>
         </div>
 

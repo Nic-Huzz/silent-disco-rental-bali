@@ -1,4 +1,11 @@
+import { Metadata } from "next";
 import Header from "@/components/Header";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.silentdiscorentalbali.com",
+  },
+};
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
 import ClientLogos from "@/components/ClientLogos";

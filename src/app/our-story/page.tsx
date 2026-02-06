@@ -92,7 +92,7 @@ export default function OurStoryPage() {
         {/* Our Story Title */}
         <section className="pt-12 pb-8 bg-gradient-to-b from-[#5e17eb]/10 to-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900">Our Story</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900">Our Story - Silent Disco Rental Bali</h1>
           </div>
         </section>
 
@@ -236,7 +236,7 @@ export default function OurStoryPage() {
               <div className="relative aspect-[3/4] max-w-md rounded-2xl overflow-hidden bg-gray-200 shadow-lg">
                 <Image
                   src="/images/our-story/nic-contact.jpg" // PLACEHOLDER
-                  alt="Nic Huzz"
+                  alt="Nic Huzz - founder of Silent Disco Rental Bali"
                   fill
                   className="object-cover"
                 />

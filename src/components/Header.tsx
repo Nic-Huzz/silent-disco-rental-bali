@@ -13,6 +13,8 @@ export default function Header() {
     { label: "Retreats", href: "/retreats" },
     { label: "Our Story", href: "/our-story" },
     { label: "Buy Headsets", href: "/buy-headsets" },
+    { label: "Blog", href: "/blog" },
+    { label: "FAQ", href: "/faq" },
     { label: "Contact", href: "/#contact" },
   ];
 

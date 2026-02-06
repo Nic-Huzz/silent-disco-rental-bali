@@ -22,8 +22,8 @@ export default function ConferencesPage() {
       company: "EPSON",
       headsets: 100,
       exhibits: 3,
-      video: "/Conference Videos/epson-conference.mov",
-      videoType: "video/quicktime",
+      video: "/Conference Videos/epson-conference.mp4",
+      videoType: "video/mp4",
       description: "Product launch event with dedicated audio channels per demo station",
     },
     {
@@ -92,8 +92,37 @@ export default function ConferencesPage() {
     }
   };
 
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Conference Headset Rental Bali",
+    description: "Professional multi-channel wireless headset rental for corporate conferences, exhibitions, and simultaneous translation in Bali. Trusted by AWS, IBM, and EPSON.",
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Silent Disco Rental Bali",
+      "@id": "https://www.silentdiscorentalbali.com",
+    },
+    areaServed: { "@type": "Place", name: "Bali, Indonesia" },
+    url: "https://www.silentdiscorentalbali.com/conferences",
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: [".speakable-headline", ".speakable-intro"],
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.silentdiscorentalbali.com" },
+      { "@type": "ListItem", position: 2, name: "Conferences", item: "https://www.silentdiscorentalbali.com/conferences" },
+    ],
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Header />
       <main>
         {/* Hero Section */}
@@ -101,10 +130,10 @@ export default function ConferencesPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
               <p className="text-[#5e17eb] font-semibold mb-3">Professional Audio Solutions</p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                Conferences
+              <h1 className="speakable-headline text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                Conference Headset Rental Bali
               </h1>
-              <p className="text-xl md:text-2xl text-gray-600 leading-relaxed">
+              <p className="speakable-intro text-xl md:text-2xl text-gray-600 leading-relaxed">
                 Hosting multiple speakers in one room? An exhibit in a loud space? Or want to create a guided experience?
               </p>
             </div>
@@ -117,7 +146,7 @@ export default function ConferencesPage() {
             <div className="text-center mb-12">
               <p className="text-[#5e17eb] font-semibold mb-2">Why Silent Disco?</p>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                Perfect for Conferences
+                Why Silent Disco Headphones for Conferences?
               </h2>
             </div>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
@@ -146,7 +175,7 @@ export default function ConferencesPage() {
               <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg">
                 <Image
                   src="/Conference Videos/aws-logo.png"
-                  alt="AWS"
+                  alt="AWS logo - conference headset rental client in Bali"
                   width={120}
                   height={60}
                   className="h-10 md:h-12 w-auto"
@@ -156,7 +185,7 @@ export default function ConferencesPage() {
               <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg">
                 <Image
                   src="/Conference Videos/epson-logo.png"
-                  alt="EPSON"
+                  alt="EPSON logo - conference headset hire client in Bali"
                   width={120}
                   height={60}
                   className="h-10 md:h-12 w-auto"
@@ -166,7 +195,7 @@ export default function ConferencesPage() {
               <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg">
                 <Image
                   src="/Conference Videos/ibm-logo.png"
-                  alt="IBM"
+                  alt="IBM logo - silent disco conference headset rental Bali"
                   width={120}
                   height={60}
                   className="h-10 md:h-12 w-auto"

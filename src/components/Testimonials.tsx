@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Script from "next/script";
 
 export default function Testimonials() {
   const testimonials = [
@@ -162,6 +163,33 @@ export default function Testimonials() {
           </div>
         </div>
       </div>
+
+      {/* Review Schema for Rich Snippets */}
+      <Script
+        id="review-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Silent Disco Rental Bali",
+            "@id": "https://www.silentdiscorentalbali.com",
+            "review": testimonials.map((t) => ({
+              "@type": "Review",
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": t.rating,
+                "bestRating": 5,
+              },
+              "author": {
+                "@type": "Person",
+                "name": t.name,
+              },
+              "reviewBody": t.text,
+            })),
+          }),
+        }}
+      />
     </section>
   );
 }

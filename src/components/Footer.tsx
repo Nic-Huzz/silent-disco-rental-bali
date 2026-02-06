@@ -60,6 +60,16 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/blog" className="text-gray-400 hover:text-white transition-colors">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link href="/faq" className="text-gray-400 hover:text-white transition-colors">
+                  FAQ
+                </Link>
+              </li>
+              <li>
                 <Link href="#contact" className="text-gray-400 hover:text-white transition-colors">
                   Contact Us
                 </Link>
@@ -67,24 +77,33 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Locations */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Services</h3>
+            <h3 className="font-semibold text-lg mb-4">Locations</h3>
             <ul className="space-y-3">
               <li>
-                <span className="text-gray-400">Beach Club Parties</span>
+                <Link href="/silent-disco-canggu" className="text-gray-400 hover:text-white transition-colors">Canggu</Link>
               </li>
               <li>
-                <span className="text-gray-400">Corporate Events</span>
+                <Link href="/silent-disco-seminyak" className="text-gray-400 hover:text-white transition-colors">Seminyak</Link>
               </li>
               <li>
-                <span className="text-gray-400">Wellness Retreats</span>
+                <Link href="/silent-disco-ubud" className="text-gray-400 hover:text-white transition-colors">Ubud</Link>
               </li>
               <li>
-                <span className="text-gray-400">Conference Audio</span>
+                <Link href="/silent-disco-uluwatu" className="text-gray-400 hover:text-white transition-colors">Uluwatu</Link>
               </li>
               <li>
-                <span className="text-gray-400">Private Parties</span>
+                <Link href="/silent-disco-nusa-dua" className="text-gray-400 hover:text-white transition-colors">Nusa Dua</Link>
+              </li>
+              <li>
+                <Link href="/silent-disco-sanur" className="text-gray-400 hover:text-white transition-colors">Sanur</Link>
+              </li>
+              <li>
+                <Link href="/silent-disco-kuta" className="text-gray-400 hover:text-white transition-colors">Kuta</Link>
+              </li>
+              <li>
+                <Link href="/silent-disco-jimbaran" className="text-gray-400 hover:text-white transition-colors">Jimbaran</Link>
               </li>
             </ul>
           </div>

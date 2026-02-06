@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Script from "next/script";
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -46,7 +47,7 @@ export default function FAQ() {
         <div className="text-center mb-16">
           <p className="text-[#5e17eb] font-semibold mb-2">Got Questions?</p>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Frequently Asked Questions
+            Silent Disco Rental Bali — FAQ
           </h2>
         </div>
 
@@ -96,6 +97,26 @@ export default function FAQ() {
           </a>
         </div>
       </div>
+
+      {/* FAQ Schema for Rich Snippets */}
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map((faq) => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer,
+              },
+            })),
+          }),
+        }}
+      />
     </section>
   );
 }

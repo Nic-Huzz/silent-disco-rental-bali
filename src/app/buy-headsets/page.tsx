@@ -1,6 +1,30 @@
+import { Metadata } from "next";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "Buy Silent Disco Headsets Bali | Start Your Own Business",
+  description: "Buy professional silent disco headsets in Bali. Start your own silent disco rental business. Premium wireless headphones, transmitters & full setup packages. Contact us for wholesale prices.",
+  keywords: [
+    "buy silent disco headsets bali",
+    "buy silent disco headphones bali",
+    "silent disco equipment for sale bali",
+    "wireless headphones wholesale bali",
+    "start silent disco business bali",
+    "silent disco headsets indonesia",
+    "silent disco equipment supplier bali",
+    "buy wireless headphones bali",
+  ],
+  alternates: {
+    canonical: "https://www.silentdiscorentalbali.com/buy-headsets",
+  },
+  openGraph: {
+    title: "Buy Silent Disco Headsets | Start Your Business",
+    description: "Premium silent disco equipment for sale in Bali. Start your own rental business with professional headsets and transmitters.",
+    url: "https://www.silentdiscorentalbali.com/buy-headsets",
+  },
+};
 
 export default function BuyHeadsetsPage() {
   return (
@@ -40,7 +64,7 @@ export default function BuyHeadsetsPage() {
                 <div className="relative aspect-square max-w-lg mx-auto">
                   <Image
                     src="/images/New-headset.jpg"
-                    alt="Silent Disco Headset with custom logo"
+                    alt="Buy silent disco headsets Bali - premium wireless headphones with custom branding"
                     fill
                     className="object-contain"
                     priority

@@ -78,23 +78,55 @@ export default function RetreatsPage() {
       description: "Movement and expression",
       image: "/Photo Carousel/carousel-6.jpg",
       imagePosition: "object-[center_45%]",
+      alt: "Physical wellness through silent disco dance movement in Bali",
     },
     {
       title: "Emotional",
       description: "Creating a space for people to express",
       image: "/Photo Carousel/carousel-10.png",
       imagePosition: "object-[center_30%]",
+      alt: "Emotional expression during silent disco retreat experience",
     },
     {
       title: "Mental",
       description: "Grounding and presence through breathwork + meditation",
       image: "/Photo Carousel/carousel-2.jpg",
       imagePosition: "object-center",
+      alt: "Mental wellness through breathwork and meditation with headphones",
     },
   ];
 
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Vibe Rise Dance Journey — Silent Disco Retreat Experience Bali",
+    description: "Guided meditation, breathwork, and silent disco dance journey for wellness retreats, yoga retreats, and corporate retreats in Bali. A holistic experience combining physical movement, emotional expression, and mental grounding through premium wireless headsets.",
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Silent Disco Rental Bali",
+      "@id": "https://www.silentdiscorentalbali.com",
+    },
+    areaServed: { "@type": "Place", name: "Bali, Indonesia" },
+    url: "https://www.silentdiscorentalbali.com/retreats",
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: [".speakable-headline", ".speakable-intro"],
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.silentdiscorentalbali.com" },
+      { "@type": "ListItem", position: 2, name: "Retreats", item: "https://www.silentdiscorentalbali.com/retreats" },
+    ],
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Header />
       <main>
         {/* Hero Section - Vibe Rise Dance Journey */}
@@ -103,10 +135,10 @@ export default function RetreatsPage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-[#5e17eb] font-semibold mb-3">Give Your Guests an Unforgettable Experience</p>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                  Vibe Rise Dance Journey
+                <h1 className="speakable-headline text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                  Vibe Rise Dance Journey Bali
                 </h1>
-                <p className="text-xl text-gray-700 mb-4">
+                <p className="speakable-intro text-xl text-gray-700 mb-4">
                   The perfect way to start the day or celebrate the night — naturally.
                 </p>
                 <p className="text-gray-600 mb-4">
@@ -128,7 +160,7 @@ export default function RetreatsPage() {
                     playsInline
                     controls
                   >
-                    <source src="/Retreat/Retreat Videos/retreat-video-2.mov" type="video/quicktime" />
+                    <source src="/Retreat/Retreat Videos/retreat-video-2.mp4" type="video/mp4" />
                   </video>
                 </div>
               </div>
@@ -274,7 +306,7 @@ export default function RetreatsPage() {
                     <div className="w-32 h-32 rounded-full overflow-hidden bg-gray-200 relative">
                       <Image
                         src={testimonial.image}
-                        alt={testimonial.name}
+                        alt={`${testimonial.name} - retreat host testimonial for silent disco Bali`}
                         fill
                         className="object-cover"
                       />
@@ -319,7 +351,7 @@ export default function RetreatsPage() {
                   <div className="relative aspect-[4/3] bg-gray-200">
                     <Image
                       src={pillar.image}
-                      alt={pillar.title}
+                      alt={pillar.alt}
                       fill
                       className={`object-cover ${pillar.imagePosition}`}
                     />
@@ -374,7 +406,7 @@ export default function RetreatsPage() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p className="text-[#ffdd27] font-semibold mb-2">Let&apos;s Chat</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Book Vibe Rise for Your Retreat
+              Book Vibe Rise for Your Bali Retreat
             </h2>
             <p className="text-white/80 mb-8 max-w-2xl mx-auto">
               Have questions about how Vibe Rise can fit into your retreat schedule?
@@ -491,7 +523,7 @@ export default function RetreatsPage() {
                 <div className="relative aspect-[3/4] max-w-md mx-auto rounded-2xl overflow-hidden bg-gray-200">
                   <Image
                     src="/images/About me.jpg"
-                    alt="Nic Huzz"
+                    alt="Nic Huzz - Silent Disco Rental Bali founder and retreat facilitator"
                     fill
                     className="object-cover"
                   />

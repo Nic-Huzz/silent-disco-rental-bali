@@ -6,21 +6,25 @@ export default function WhyChooseUs() {
       title: "Premium Quality",
       description: "Best in market headsets: Noise-cancelling + Hi-Fi sound quality for an immersive experience.",
       image: "/images/product-showcase.jpg",
+      alt: "Premium silent disco headphones with Hi-Fi sound quality in Bali",
     },
     {
       title: "Best Prices",
       description: "Competitive rates without sacrificing quality. Transparent pricing with no hidden fees.",
       image: "/images/Best prices.jpg",
+      alt: "Affordable silent disco rental prices in Bali",
     },
     {
       title: "Experience",
       description: "Most experienced provider in Bali with custom packages to meet your specific needs.",
       image: "/images/why-section/why-dance.jpg",
+      alt: "Experienced silent disco event in Bali with dancers",
     },
     {
       title: "Trusted Partner",
       description: "Used by Bali's biggest event organisers including Sunday's Beach Club, Echo events, AWS & IBM.",
       image: "/images/founder-icon-3 copy.jpg",
+      alt: "Silent disco corporate event with AWS and IBM in Bali",
     },
   ];
 
@@ -30,7 +34,7 @@ export default function WhyChooseUs() {
         <div className="text-center mb-16">
           <p className="text-[#5e17eb] font-semibold mb-2">Why Choose Us</p>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            The Silent Disco Experts
+            The Silent Disco Experts in Bali
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             We don&apos;t just rent equipment — we create unforgettable audio experiences
@@ -47,7 +51,7 @@ export default function WhyChooseUs() {
                 <div className="relative w-full sm:w-2/5 aspect-square sm:aspect-auto">
                   <Image
                     src={reason.image}
-                    alt={reason.title}
+                    alt={reason.alt}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />

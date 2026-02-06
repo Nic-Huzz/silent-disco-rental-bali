@@ -9,6 +9,32 @@ const nextConfig: NextConfig = {
   },
   // Compression
   compress: true,
+
+  // 301 Redirects from old Wix URLs to new URLs
+  async redirects() {
+    return [
+      {
+        source: '/ourstory2',
+        destination: '/our-story',
+        permanent: true, // 301 redirect
+      },
+      {
+        source: '/guidedexperiences',
+        destination: '/retreats',
+        permanent: true,
+      },
+      {
+        source: '/s-projects-side-by-side',
+        destination: '/conferences',
+        permanent: true,
+      },
+      {
+        source: '/s-projects-side-by-side-1',
+        destination: '/conferences',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

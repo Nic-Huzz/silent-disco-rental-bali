@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import Script from "next/script";
 
 export default function PriceCalculator() {
   const [headsets, setHeadsets] = useState(100);
@@ -212,6 +213,42 @@ export default function PriceCalculator() {
           </div>
         </div>
       </div>
+
+      {/* Product/Offer Schema for Rich Snippets */}
+      <Script
+        id="offer-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Silent Disco Headset Rental Bali",
+            "description": "Premium Hi-Fi wireless silent disco headphones for hire in Bali. Noise-cancelling, 3 LED colour-coded channels, 10-hour battery life. Free delivery across Bali.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Silent Disco Rental Bali",
+            },
+            "offers": {
+              "@type": "AggregateOffer",
+              "priceCurrency": "IDR",
+              "lowPrice": "85000",
+              "highPrice": "150000",
+              "offerCount": "3",
+              "availability": "https://schema.org/InStock",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "unitText": "per headset per event",
+              },
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5",
+              "reviewCount": "73",
+              "bestRating": "5",
+            },
+          }),
+        }}
+      />
     </section>
   );
 }
