@@ -38,10 +38,6 @@ export default function ServicePage({ data }: { data: ServicePageData }) {
       name: "Bali, Indonesia",
     },
     url: `https://www.silentdiscorentalbali.com/${data.slug}`,
-    speakable: {
-      "@type": "SpeakableSpecification",
-      cssSelector: [".speakable-headline", ".speakable-intro", ".speakable-answer"],
-    },
   };
 
   const howToSchema = {

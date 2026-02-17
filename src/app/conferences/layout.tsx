@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Conference Headset Rental Bali | Silent Disco Corporate Events",
+  title: { absolute: "Conference Headset Rental Bali | Silent Disco Corporate Events" },
   description: "Conference headset rental & hire in Bali. Multi-channel wireless headsets for translation, exhibitions & speakers. Trusted by AWS, IBM & EPSON. Get a quote!",
   keywords: [
     "conference headsets bali",
@@ -27,6 +27,10 @@ export const metadata: Metadata = {
     title: "Conference Headset Rental & Hire Bali | Corporate Event Audio",
     description: "Professional wireless headset rental for conferences in Bali. Multi-track audio, simultaneous translation. Trusted by AWS, IBM & EPSON.",
     url: "https://www.silentdiscorentalbali.com/conferences",
+    siteName: "Silent Disco Rental Bali",
+    type: "website",
+    locale: "en_US",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Conference Headset Rental Bali" }],
   },
 };
 

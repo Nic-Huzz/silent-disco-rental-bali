@@ -235,7 +235,7 @@ export default function OurStoryPage() {
               {/* Nic's Photo */}
               <div className="relative aspect-[3/4] max-w-md rounded-2xl overflow-hidden bg-gray-200 shadow-lg">
                 <Image
-                  src="/images/our-story/nic-contact.jpg" // PLACEHOLDER
+                  src="/images/About me.jpg"
                   alt="Nic Huzz - founder of Silent Disco Rental Bali"
                   fill
                   className="object-cover"

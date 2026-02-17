@@ -140,11 +140,7 @@ export default function RootLayout({
               "sameAs": [
                 "https://www.instagram.com/silentdiscorentalbali",
                 "https://www.instagram.com/nichuzz"
-              ],
-              "speakable": {
-                "@type": "SpeakableSpecification",
-                "cssSelector": [".speakable-description"]
-              }
+              ]
             }),
           }}
         />

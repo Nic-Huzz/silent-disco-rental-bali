@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const location = locations.find((l) => l.slug === slug);
   if (location) {
     return {
-      title: location.title,
+      title: { absolute: location.title },
       description: location.description,
       keywords: location.keywords,
       alternates: {
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const service = services.find((s) => s.slug === slug);
   if (service) {
     return {
-      title: service.title,
+      title: { absolute: service.title },
       description: service.description,
       keywords: service.keywords,
       alternates: {

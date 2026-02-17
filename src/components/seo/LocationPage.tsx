@@ -67,10 +67,6 @@ export default function LocationPage({ data }: { data: LocationPageData }) {
       name: `${data.location}, Bali`,
     },
     priceRange: "$$",
-    speakable: {
-      "@type": "SpeakableSpecification",
-      cssSelector: [".speakable-headline", ".speakable-intro", ".speakable-answer"],
-    },
   };
 
   const faqSchema = {

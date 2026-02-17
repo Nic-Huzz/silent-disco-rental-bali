@@ -104,10 +104,6 @@ export default function ConferencesPage() {
     },
     areaServed: { "@type": "Place", name: "Bali, Indonesia" },
     url: "https://www.silentdiscorentalbali.com/conferences",
-    speakable: {
-      "@type": "SpeakableSpecification",
-      cssSelector: [".speakable-headline", ".speakable-intro"],
-    },
   };
 
   const breadcrumbSchema = {

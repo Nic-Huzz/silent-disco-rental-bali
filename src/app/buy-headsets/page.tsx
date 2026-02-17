@@ -4,8 +4,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Buy Silent Disco Headsets Bali | Start Your Own Business",
-  description: "Buy professional silent disco headsets in Bali. Start your own silent disco rental business. Premium wireless headphones, transmitters & full setup packages. Contact us for wholesale prices.",
+  title: { absolute: "Buy Silent Disco Headsets Bali | Start Your Own Business" },
+  description: "Buy silent disco headsets in Bali. Start your own rental business. Premium wireless headphones, transmitters & full setup packages. Wholesale prices available.",
   keywords: [
     "buy silent disco headsets bali",
     "buy silent disco headphones bali",
@@ -23,6 +23,10 @@ export const metadata: Metadata = {
     title: "Buy Silent Disco Headsets | Start Your Business",
     description: "Premium silent disco equipment for sale in Bali. Start your own rental business with professional headsets and transmitters.",
     url: "https://www.silentdiscorentalbali.com/buy-headsets",
+    siteName: "Silent Disco Rental Bali",
+    type: "website",
+    locale: "en_US",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Buy Silent Disco Headsets Bali" }],
   },
 };
 

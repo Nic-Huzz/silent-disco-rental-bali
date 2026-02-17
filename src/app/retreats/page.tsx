@@ -83,7 +83,7 @@ export default function RetreatsPage() {
     {
       title: "Emotional",
       description: "Creating a space for people to express",
-      image: "/Photo Carousel/carousel-10.png",
+      image: "/Photo Carousel/carousel-10.jpg",
       imagePosition: "object-[center_30%]",
       alt: "Emotional expression during silent disco retreat experience",
     },
@@ -108,10 +108,6 @@ export default function RetreatsPage() {
     },
     areaServed: { "@type": "Place", name: "Bali, Indonesia" },
     url: "https://www.silentdiscorentalbali.com/retreats",
-    speakable: {
-      "@type": "SpeakableSpecification",
-      cssSelector: [".speakable-headline", ".speakable-intro"],
-    },
   };
 
   const breadcrumbSchema = {

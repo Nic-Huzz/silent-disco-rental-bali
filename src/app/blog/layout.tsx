@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog | Silent Disco Rental Bali",
+  title: { absolute: "Blog | Silent Disco Rental Bali" },
   description: "Tips, guides, and inspiration for planning silent disco events in Bali. Venue recommendations, pricing info, and expert advice.",
   alternates: {
     canonical: "https://www.silentdiscorentalbali.com/blog",

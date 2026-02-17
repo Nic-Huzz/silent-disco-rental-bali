@@ -26,10 +26,6 @@ export default function BlogArticle({ post }: { post: BlogPost }) {
       "@type": "WebPage",
       "@id": `https://www.silentdiscorentalbali.com/blog/${post.slug}`,
     },
-    speakable: {
-      "@type": "SpeakableSpecification",
-      cssSelector: [".speakable-headline", ".speakable-intro"],
-    },
   };
 
   const breadcrumbSchema = {
