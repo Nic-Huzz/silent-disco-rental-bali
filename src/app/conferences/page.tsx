@@ -120,7 +120,7 @@ export default function ConferencesPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Header />
-      <main>
+      <main className="pt-16 md:pt-20">
         {/* Hero Section */}
         <section className="pt-28 pb-16 md:pt-36 md:pb-20 bg-gradient-to-b from-[#5e17eb]/10 to-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

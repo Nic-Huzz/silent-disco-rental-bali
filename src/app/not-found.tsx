@@ -6,7 +6,7 @@ export default function NotFound() {
   return (
     <>
       <Header />
-      <main className="min-h-[70vh] flex items-center justify-center bg-gradient-to-b from-[#5e17eb]/10 to-white">
+      <main className="pt-16 md:pt-20 min-h-[70vh] flex items-center justify-center bg-gradient-to-b from-[#5e17eb]/10 to-white">
         <div className="max-w-2xl mx-auto px-4 text-center">
           <h1 className="text-6xl md:text-8xl font-bold text-[#5e17eb] mb-4">404</h1>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">

@@ -50,7 +50,7 @@ export default function FAQPage() {
 
       <Header />
 
-      <main>
+      <main className="pt-16 md:pt-20">
         {/* Hero */}
         <section className="pt-28 pb-16 md:pt-36 md:pb-20 bg-gradient-to-b from-[#5e17eb]/10 to-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

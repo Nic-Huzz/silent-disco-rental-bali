@@ -34,7 +34,7 @@ export default function BuyHeadsetsPage() {
   return (
     <>
       <Header />
-      <main>
+      <main className="pt-16 md:pt-20">
         <section className="pt-28 pb-20 md:pt-36 md:pb-28 bg-gradient-to-b from-[#5e17eb]/5 to-white min-h-[80vh] flex items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-12 items-center">

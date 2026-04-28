@@ -79,7 +79,7 @@ export default function OurStoryPage() {
   return (
     <>
       <Header />
-      <main>
+      <main className="pt-16 md:pt-20">
         {/* Banner */}
         <section className="pt-24 pb-4 bg-gradient-to-r from-[#5e17eb] to-[#4a0ea8]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
