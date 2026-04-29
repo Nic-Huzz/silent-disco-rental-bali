@@ -40,7 +40,7 @@ export default function Hero() {
           {/* Left - Text Content */}
           <div className="text-white">
             {/* Badge */}
-            <span className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white/90 px-4 py-1.5 md:px-5 md:py-2 rounded-full text-xs md:text-sm font-semibold mb-4 md:mb-6">
+            <span className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white/90 px-4 py-1.5 md:px-5 md:py-2 rounded-full text-xs md:text-sm font-semibold mt-4 md:mt-6 mb-4 md:mb-6">
               Bali&apos;s #1 Silent Disco Provider
             </span>
 
