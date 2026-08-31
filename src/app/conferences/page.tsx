@@ -34,6 +34,14 @@ export default function ConferencesPage() {
       videoType: "video/mp4",
       description: "Corporate conference with multilingual simultaneous translation",
     },
+    {
+      company: "Salesforce",
+      headsets: 150,
+      exhibits: 3,
+      video: "/Conference Videos/salesforce-conference.mp4",
+      videoType: "video/mp4",
+      description: "Tech summit with multi-track keynotes and breakout sessions",
+    },
   ];
 
   const benefits = [
@@ -96,7 +104,7 @@ export default function ConferencesPage() {
     "@context": "https://schema.org",
     "@type": "Service",
     name: "Conference Headset Rental Bali",
-    description: "Professional multi-channel wireless headset rental for corporate conferences, exhibitions, and simultaneous translation in Bali. Trusted by AWS, IBM, and EPSON.",
+    description: "Professional multi-channel wireless headset rental for corporate conferences, exhibitions, and simultaneous translation in Bali. Trusted by AWS, IBM, EPSON, and Salesforce.",
     provider: {
       "@type": "LocalBusiness",
       name: "Silent Disco Rental Bali",
@@ -193,6 +201,16 @@ export default function ConferencesPage() {
                   src="/Conference Videos/ibm-logo.png"
                   alt="IBM logo - silent disco conference headset rental Bali"
                   width={120}
+                  height={60}
+                  className="h-10 md:h-12 w-auto"
+                />
+              </div>
+              {/* Salesforce */}
+              <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg">
+                <Image
+                  src="/Conference Videos/salesforce-logo.svg"
+                  alt="Salesforce logo - conference headset rental client in Bali"
+                  width={160}
                   height={60}
                   className="h-10 md:h-12 w-auto"
                 />
