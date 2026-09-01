@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     default: "Silent Disco Rental Bali | #1 Headset Hire for Events & Parties",
     template: "%s | Silent Disco Rental Bali",
   },
-  description: "Bali's #1 silent disco rental & hire. 300+ premium headsets from IDR 100k. Weddings, parties, retreats & conferences. Free delivery island-wide. Book now!",
+  description: "Bali's #1 silent disco rental & hire. 650+ premium headsets from IDR 100k. Weddings, parties, retreats & conferences. Free delivery across Bali, delivery to Jakarta. Book now!",
   keywords: [
     "silent disco rental bali",
     "silent disco hire bali",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Silent Disco Rental Bali | #1 Headset Hire for Events & Parties",
-    description: "Bali's #1 silent disco rental & hire service. 300+ premium wireless headsets, best prices, 5-star rated. Weddings, parties, retreats & conferences. Book now!",
+    description: "Bali's #1 silent disco rental & hire service. 650+ premium wireless headsets, best prices, 5-star rated. Weddings, parties, retreats & conferences. Book now!",
     url: "https://www.silentdiscorentalbali.com",
     siteName: "Silent Disco Rental Bali",
     type: "website",
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Silent Disco Rental & Hire Bali | #1 Headset Provider",
-    description: "Bali's #1 silent disco rental & hire. 300+ premium headsets, best prices, 73 five-star Google reviews. Book now!",
+    description: "Bali's #1 silent disco rental & hire. 650+ premium headsets, best prices, 73 five-star Google reviews. Book now!",
     images: ["/og-image.jpg"],
   },
   robots: {

@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# invoices, quotes & expenses (client data)
+invoice-*.html
+invoice-*.pdf
+quote-*.html
+quote-*.pdf
+*-expenses.html
+*-expenses.pdf

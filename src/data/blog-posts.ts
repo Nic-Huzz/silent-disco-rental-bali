@@ -35,7 +35,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         heading: "Step 2: Choose Your Headset Count",
-        content: "A good rule of thumb is to order headsets for 80–100% of your guest list. Not everyone will wear them at the same time, but you want enough so nobody feels left out. Our minimum order is 20 headsets, and we stock over 300 for larger events. For weddings and corporate events, we recommend ordering for the full guest count. For casual parties, 80% coverage usually works well.",
+        content: "A good rule of thumb is to order headsets for 80–100% of your guest list. Not everyone will wear them at the same time, but you want enough so nobody feels left out. Our minimum order is 20 headsets, and we stock over 650 for larger events. For weddings and corporate events, we recommend ordering for the full guest count. For casual parties, 80% coverage usually works well.",
       },
       {
         heading: "Step 3: Plan Your Music Channels",

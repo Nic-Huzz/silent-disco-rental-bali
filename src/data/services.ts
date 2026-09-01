@@ -16,7 +16,7 @@ export const services: ServicePage[] = [
   {
     slug: "weddings",
     title: "Silent Disco Hire for Weddings in Bali",
-    description: "Silent disco headset hire for Bali weddings. Keep the party going without noise complaints. 300+ premium headsets, 3 music channels. Free delivery island-wide.",
+    description: "Silent disco headset hire for Bali weddings. Keep the party going without noise complaints. 650+ premium headsets, 3 music channels. Free delivery island-wide.",
     keywords: ["silent disco wedding bali", "wedding headset hire bali", "silent disco wedding reception", "bali wedding entertainment"],
     h1: "Silent Disco Hire for Weddings in Bali",
     heroSubtitle: "Keep the party going all night — without a single noise complaint",
@@ -56,13 +56,13 @@ export const services: ServicePage[] = [
     whatsappMessage: "Hi! I'm planning a wedding in Bali and I'd love to hire silent disco headsets. Could you share availability and pricing?",
     directAnswer: {
       question: "Can I hire silent disco headsets for a wedding in Bali?",
-      answer: "Yes — Silent Disco Rental Bali provides 300+ premium wireless headsets for wedding receptions and after-parties across Bali. Guests choose between 3 music channels with colour-coded LEDs, and you can party past midnight without noise complaints. Pricing from IDR 100,000 per headset (~$6.50 USD) with free delivery to any venue. Book via WhatsApp at +62 822 6635 5322.",
+      answer: "Yes — Silent Disco Rental Bali provides 650+ premium wireless headsets for wedding receptions and after-parties across Bali. Guests choose between 3 music channels with colour-coded LEDs, and you can party past midnight without noise complaints. Pricing from IDR 100,000 per headset (~$6.50 USD) with free delivery to any venue. Book via WhatsApp at +62 822 6635 5322.",
     },
   },
   {
     slug: "beach-parties",
     title: "Silent Disco for Beach Parties in Bali",
-    description: "Silent disco headset rental for Bali beach parties. Dance on the sand without noise restrictions. 300+ premium headsets, 3 channels. Free delivery island-wide.",
+    description: "Silent disco headset rental for Bali beach parties. Dance on the sand without noise restrictions. 650+ premium headsets, 3 channels. Free delivery island-wide.",
     keywords: ["silent disco beach party bali", "beach party headsets bali", "silent beach party", "bali beach event equipment"],
     h1: "Silent Disco for Beach Parties in Bali",
     heroSubtitle: "Dance on the sand, under the stars — no speakers required",
@@ -102,7 +102,7 @@ export const services: ServicePage[] = [
     whatsappMessage: "Hi! I'm planning a beach party in Bali and I'd love to hire silent disco headsets. Could you share availability and pricing?",
     directAnswer: {
       question: "How do I rent headphones for a beach party in Bali?",
-      answer: "Silent Disco Rental Bali delivers 300+ premium wireless headsets free to any beach across the island. Dance on the sand with zero noise restrictions — our headsets have a 200-metre range, 10-hour battery, and 3 music channels with LED colour-coding. Pricing from IDR 100,000 per headset (~$6.50 USD). Book via WhatsApp at +62 822 6635 5322.",
+      answer: "Silent Disco Rental Bali delivers 650+ premium wireless headsets free to any beach across the island. Dance on the sand with zero noise restrictions — our headsets have a 200-metre range, 10-hour battery, and 3 music channels with LED colour-coding. Pricing from IDR 100,000 per headset (~$6.50 USD). Book via WhatsApp at +62 822 6635 5322.",
     },
   },
 ];
