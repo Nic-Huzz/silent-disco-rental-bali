@@ -47,6 +47,12 @@ export const metadata: Metadata = {
     "silent disco for events bali",
     "rent silent disco headphones bali",
     "3 channel headphones bali",
+    "silent disco jakarta",
+    "silent disco rental jakarta",
+    "conference headsets jakarta",
+    "headset rental jakarta",
+    "silent disco rental indonesia",
+    "silent disco indonesia",
   ],
   authors: [{ name: "Silent Disco Rental Bali" }],
   creator: "Silent Disco Rental Bali",
@@ -180,7 +186,8 @@ export default function RootLayout({
                 { "@type": "Place", "name": "Sanur, Bali" },
                 { "@type": "Place", "name": "Kuta, Bali" },
                 { "@type": "Place", "name": "Nusa Dua, Bali" },
-                { "@type": "Place", "name": "Jimbaran, Bali" }
+                { "@type": "Place", "name": "Jimbaran, Bali" },
+                { "@type": "Place", "name": "Jakarta, Indonesia" }
               ],
               "priceRange": "$$",
               "openingHoursSpecification": {
@@ -219,10 +226,10 @@ export default function RootLayout({
                 "name": "Silent Disco Rental Bali",
                 "@id": "https://www.silentdiscorentalbali.com"
               },
-              "areaServed": {
-                "@type": "Place",
-                "name": "Bali, Indonesia"
-              },
+              "areaServed": [
+                { "@type": "Place", "name": "Bali, Indonesia" },
+                { "@type": "Place", "name": "Jakarta, Indonesia" }
+              ],
               "hasOfferCatalog": {
                 "@type": "OfferCatalog",
                 "name": "Silent Disco Rental & Hire Services",

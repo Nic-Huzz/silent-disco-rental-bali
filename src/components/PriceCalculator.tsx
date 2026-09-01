@@ -109,7 +109,7 @@ export default function PriceCalculator() {
                 <span>150</span>
               </div>
               <p className="text-sm text-gray-500 mt-2">
-                For enquiries of less than 20 headsets & more than 150 (our capacity is over 300) we&apos;ll create a custom package for you
+                For enquiries of less than 20 headsets & more than 150 (our capacity is over 800) we&apos;ll create a custom package for you
               </p>
             </div>
 

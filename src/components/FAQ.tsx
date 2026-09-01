@@ -20,8 +20,8 @@ export default function FAQ() {
       answer: "You can have up to 3 simultaneous music channels. Each channel displays a different LED color on the headsets, so you can see who's listening to what. Perfect for DJ battles, multilingual events, or giving guests musical variety!",
     },
     {
-      question: "Do you deliver to my location?",
-      answer: "Yes! We deliver all over Bali including Seminyak, Canggu, Uluwatu, Ubud, Sanur, Nusa Dua, and everywhere in between. Delivery is included in most packages.",
+      question: "Do you deliver to my location in Bali or Jakarta?",
+      answer: "Yes! We deliver all over Bali including Seminyak, Canggu, Uluwatu, Ubud, Sanur, Nusa Dua, and everywhere in between. We also deliver to Jakarta for conferences and large events. Bali delivery is included in most packages.",
     },
     {
       question: "How long is the rental period?",

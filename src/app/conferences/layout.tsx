@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: { absolute: "Conference Headset Rental Bali | Silent Disco Corporate Events" },
-  description: "Conference headset rental & hire in Bali. Multi-channel wireless headsets for translation, exhibitions & speakers. Trusted by AWS, IBM & EPSON. Get a quote!",
+  title: { absolute: "Conference Headset Rental Bali & Jakarta | Trusted by AWS, IBM & Salesforce" },
+  description: "Conference headset rental in Bali & Jakarta. Multi-channel wireless headsets for translation, exhibitions & speakers. Trusted by AWS, IBM, Salesforce & EPSON. Get a quote!",
   keywords: [
     "conference headsets bali",
     "conference headset rental bali",
@@ -19,13 +19,20 @@ export const metadata: Metadata = {
     "silent disco corporate events bali",
     "conference audio hire bali",
     "wireless translation headsets bali",
+    "conference headsets jakarta",
+    "conference headset rental jakarta",
+    "corporate event audio jakarta",
+    "simultaneous translation jakarta",
+    "conference equipment rental jakarta",
+    "conference headset hire indonesia",
+    "silent disco corporate events jakarta",
   ],
   alternates: {
     canonical: "https://www.silentdiscorentalbali.com/conferences",
   },
   openGraph: {
-    title: "Conference Headset Rental & Hire Bali | Corporate Event Audio",
-    description: "Professional wireless headset rental for conferences in Bali. Multi-track audio, simultaneous translation. Trusted by AWS, IBM & EPSON.",
+    title: "Conference Headset Rental Bali & Jakarta | Trusted by AWS, IBM & Salesforce",
+    description: "Professional wireless headset rental for conferences in Bali & Jakarta. Multi-track audio, simultaneous translation. Trusted by AWS, IBM, Salesforce & EPSON.",
     url: "https://www.silentdiscorentalbali.com/conferences",
     siteName: "Silent Disco Rental Bali",
     type: "website",

@@ -105,6 +105,9 @@ export default function Footer() {
               <li>
                 <Link href="/silent-disco-jimbaran" className="text-gray-400 hover:text-white transition-colors">Jimbaran</Link>
               </li>
+              <li>
+                <Link href="/silent-disco-jakarta" className="text-gray-400 hover:text-white transition-colors">Jakarta</Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -115,7 +118,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Silent Disco Rental Bali. All rights reserved.
           </p>
           <p className="text-gray-500 text-sm">
-            Serving all of Bali: Seminyak, Canggu, Uluwatu, Ubud, Sanur, Nusa Dua & more
+            Serving Bali & Jakarta: Seminyak, Canggu, Uluwatu, Ubud, Nusa Dua, Jakarta & more
           </p>
         </div>
       </div>

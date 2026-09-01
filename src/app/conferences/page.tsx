@@ -12,6 +12,7 @@ export default function ConferencesPage() {
   const caseStudies = [
     {
       company: "Amazon Web Services (AWS)",
+      location: "Jakarta",
       headsets: 280,
       exhibits: 4,
       video: "/Conference Videos/aws-conference.mp4",
@@ -20,6 +21,7 @@ export default function ConferencesPage() {
     },
     {
       company: "EPSON",
+      location: "Bali",
       headsets: 100,
       exhibits: 3,
       video: "/Conference Videos/epson-conference.mp4",
@@ -28,6 +30,7 @@ export default function ConferencesPage() {
     },
     {
       company: "IBM",
+      location: "Jakarta",
       headsets: 120,
       exhibits: 2,
       video: "/Conference Videos/ibm-conference.mp4",
@@ -36,6 +39,7 @@ export default function ConferencesPage() {
     },
     {
       company: "Salesforce",
+      location: "Jakarta",
       headsets: 150,
       exhibits: 3,
       video: "/Conference Videos/salesforce-conference.mp4",
@@ -110,7 +114,10 @@ export default function ConferencesPage() {
       name: "Silent Disco Rental Bali",
       "@id": "https://www.silentdiscorentalbali.com",
     },
-    areaServed: { "@type": "Place", name: "Bali, Indonesia" },
+    areaServed: [
+      { "@type": "Place", name: "Bali, Indonesia" },
+      { "@type": "Place", name: "Jakarta, Indonesia" },
+    ],
     url: "https://www.silentdiscorentalbali.com/conferences",
   };
 
@@ -133,12 +140,12 @@ export default function ConferencesPage() {
         <section className="pt-28 pb-16 md:pt-36 md:pb-20 bg-gradient-to-b from-[#5e17eb]/10 to-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
-              <p className="text-[#5e17eb] font-semibold mb-3">Professional Audio Solutions</p>
+              <p className="text-[#5e17eb] font-semibold mb-3">Trusted by AWS, IBM & Salesforce</p>
               <h1 className="speakable-headline text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                Conference Headset Rental Bali
+                Conference Headset Rental Bali & Jakarta
               </h1>
               <p className="speakable-intro text-xl md:text-2xl text-gray-600 leading-relaxed">
-                Hosting multiple speakers in one room? An exhibit in a loud space? Or want to create a guided experience?
+                Multi-track conferences, simultaneous translation, exhibitions. We&apos;ve delivered 800+ headsets to Indonesia&apos;s biggest international brands.
               </p>
             </div>
           </div>
@@ -169,7 +176,7 @@ export default function ConferencesPage() {
         <section className="py-20 bg-gradient-to-br from-[#5e17eb] to-[#4a0ea8]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <p className="text-[#ffdd27] font-semibold mb-2">Trusted By Industry Leaders</p>
+              <p className="text-[#ffdd27] font-semibold mb-2">Trusted By Industry Leaders in Jakarta & Bali</p>
               <h2 className="text-3xl md:text-4xl font-bold text-white">
                 Who we&apos;ve supported
               </h2>
@@ -179,7 +186,7 @@ export default function ConferencesPage() {
               <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg">
                 <Image
                   src="/Conference Videos/aws-logo.png"
-                  alt="AWS logo - conference headset rental client in Bali"
+                  alt="AWS logo - conference headset rental client in Jakarta"
                   width={120}
                   height={60}
                   className="h-10 md:h-12 w-auto"
@@ -199,7 +206,7 @@ export default function ConferencesPage() {
               <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg">
                 <Image
                   src="/Conference Videos/ibm-logo.png"
-                  alt="IBM logo - silent disco conference headset rental Bali"
+                  alt="IBM logo - conference headset rental client in Jakarta"
                   width={120}
                   height={60}
                   className="h-10 md:h-12 w-auto"
@@ -209,7 +216,7 @@ export default function ConferencesPage() {
               <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg">
                 <Image
                   src="/Conference Videos/salesforce-logo.svg"
-                  alt="Salesforce logo - conference headset rental client in Bali"
+                  alt="Salesforce logo - conference headset rental client in Jakarta"
                   width={160}
                   height={60}
                   className="h-10 md:h-12 w-auto"
@@ -267,9 +274,10 @@ export default function ConferencesPage() {
 
                   {/* Info */}
                   <div className={`${index % 2 === 1 ? "md:order-1" : ""}`}>
-                    <h3 className="text-2xl md:text-3xl font-bold text-[#5e17eb] mb-4">
+                    <h3 className="text-2xl md:text-3xl font-bold text-[#5e17eb] mb-2">
                       {study.company}
                     </h3>
+                    <p className="text-sm font-medium text-gray-500 mb-4">{study.location}, Indonesia</p>
                     <div className="space-y-2 mb-6">
                       <p className="text-lg text-gray-700">
                         <span className="font-semibold">{study.headsets}</span> Headsets

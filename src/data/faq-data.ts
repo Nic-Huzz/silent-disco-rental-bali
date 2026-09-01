@@ -18,7 +18,7 @@ export const faqData: FAQItem[] = [
   },
   {
     question: "Who is Silent Disco Rental Bali?",
-    answer: "Silent Disco Rental Bali is Bali's largest and most trusted silent disco headset rental and hire service. We stock over 300 premium Hi-Fi wireless headsets and have served weddings, beach parties, corporate conferences, yoga retreats, and festivals across the island since 2023. We have 73 five-star Google reviews and offer free delivery anywhere in Bali. Contact us via WhatsApp at +62 822 6635 5322.",
+    answer: "Silent Disco Rental Bali is Indonesia's largest and most trusted silent disco headset rental and hire service. We stock over 800 premium Hi-Fi wireless headsets and have served weddings, beach parties, corporate conferences, yoga retreats, and festivals across Bali and Jakarta since 2023. We've supplied headsets to AWS, IBM, and Salesforce conferences in Jakarta. We have 73 five-star Google reviews and offer free delivery anywhere in Bali. Contact us via WhatsApp at +62 822 6635 5322.",
     category: "general",
   },
 
@@ -30,7 +30,7 @@ export const faqData: FAQItem[] = [
   },
   {
     question: "How many headsets do I need for my event?",
-    answer: "We recommend 1 headset per person. For events where guests come and go, you can estimate about 70–80% of your total expected attendance. For weddings and corporate events, we recommend ordering for the full guest count. Our minimum order is 20 headsets, and we stock over 300 for larger events. We're happy to help you figure out the right number — just WhatsApp us your event details.",
+    answer: "We recommend 1 headset per person. For events where guests come and go, you can estimate about 70–80% of your total expected attendance. For weddings and corporate events, we recommend ordering for the full guest count. Our minimum order is 20 headsets, and we stock over 800 for larger events. We're happy to help you figure out the right number — just WhatsApp us your event details.",
     category: "pricing",
   },
   {
@@ -46,8 +46,8 @@ export const faqData: FAQItem[] = [
 
   // === LOGISTICS ===
   {
-    question: "Do you deliver anywhere in Bali?",
-    answer: "Yes! We offer free delivery and collection to any venue across Bali, including Canggu, Seminyak, Ubud, Uluwatu, Sanur, Nusa Dua, Kuta, Jimbaran, and everywhere in between. We deliver to villas, beach clubs, hotels, resorts, convention centres, restaurants, and private properties. Just send us your venue details via WhatsApp.",
+    question: "Do you deliver to Bali and Jakarta?",
+    answer: "Yes! We offer free delivery and collection to any venue across Bali, including Canggu, Seminyak, Ubud, Uluwatu, Sanur, Nusa Dua, Kuta, Jimbaran, and everywhere in between. We also deliver to Jakarta for conferences and large events — equipment is shipped from Bali with full on-site support. We've already serviced AWS, IBM, and Salesforce conferences in Jakarta. Just send us your venue details via WhatsApp.",
     category: "logistics",
   },
   {
@@ -79,7 +79,7 @@ export const faqData: FAQItem[] = [
   },
   {
     question: "Do you provide silent disco for corporate events and conferences?",
-    answer: "Yes! Our multi-channel headsets are perfect for corporate conferences, exhibitions, and team-building events. Use separate channels for different languages (simultaneous translation), breakout sessions, or presentations in noisy environments. We've supplied headsets to events at the Bali Nusa Dua Convention Centre, five-star resorts, and corporate retreats across the island.",
+    answer: "Yes! Our multi-channel headsets are perfect for corporate conferences, exhibitions, and team-building events. Use separate channels for different languages (simultaneous translation), breakout sessions, or presentations in noisy environments. We've supplied headsets to AWS, IBM, and Salesforce conferences in Jakarta, plus events at the Bali Nusa Dua Convention Centre and five-star resorts across Indonesia.",
     category: "events",
   },
   {

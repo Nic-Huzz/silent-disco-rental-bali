@@ -5,23 +5,31 @@ import DirectAnswer from "@/components/seo/DirectAnswer";
 
 export default function LocationPage({ data }: { data: LocationPageData }) {
   const whatsappUrl = `https://wa.me/6282266355322?text=${encodeURIComponent(data.whatsappMessage)}`;
+  const region = data.region || "Bali";
+  const isBali = region === "Bali";
 
   const faqItems = [
     {
       question: `Do you deliver silent disco headsets to ${data.location}?`,
-      answer: `Yes! We offer free delivery to all venues in ${data.location}, Bali. Just send us your venue details via WhatsApp and we'll arrange delivery and collection.`,
+      answer: isBali
+        ? `Yes! We offer free delivery to all venues in ${data.location}, Bali. Just send us your venue details via WhatsApp and we'll arrange delivery and collection.`
+        : `Yes! We deliver to all major venues in ${data.location}. Equipment is shipped from Bali with full on-site support. Just send us your venue details via WhatsApp and we'll arrange everything.`,
     },
     {
       question: `How many headsets can I rent for an event in ${data.location}?`,
-      answer: `We stock over 300 premium wireless headsets. Whether you need 20 for an intimate gathering or 300+ for a large event in ${data.location}, we've got you covered.`,
+      answer: isBali
+        ? `We stock over 300 premium wireless headsets. Whether you need 20 for an intimate gathering or 300+ for a large event in ${data.location}, we've got you covered.`
+        : `We stock over 800 premium wireless headsets. Whether you need 50 for a breakout session or 800+ for a full conference in ${data.location}, we've got you covered. We've already delivered 280 headsets to AWS, 120 to IBM, and 150 to Salesforce in Jakarta.`,
     },
     {
       question: `What's included in the silent disco rental in ${data.location}?`,
-      answer: `Every rental includes wireless headsets, transmitters (up to 3 music channels), free delivery and setup at your ${data.location} venue, and next-day collection. Battery life is 10 hours per headset.`,
+      answer: `Every rental includes wireless headsets, transmitters (up to 3 music channels), delivery and setup at your ${data.location} venue, and collection after the event. Battery life is 10 hours per headset.`,
     },
     {
       question: `How much does it cost to hire silent disco headsets in ${data.location}?`,
-      answer: `Pricing starts from IDR 100,000 per headset with volume discounts for larger orders. Use our pricing calculator below for an instant quote. Delivery to ${data.location} is always free.`,
+      answer: isBali
+        ? `Pricing starts from IDR 100,000 per headset with volume discounts for larger orders. Use our pricing calculator below for an instant quote. Delivery to ${data.location} is always free.`
+        : `Pricing starts from IDR 100,000 per headset with volume discounts for larger orders. Use our pricing calculator below for an instant quote. Contact us via WhatsApp for delivery pricing to ${data.location}.`,
     },
   ];
 
@@ -54,7 +62,7 @@ export default function LocationPage({ data }: { data: LocationPageData }) {
     address: {
       "@type": "PostalAddress",
       addressLocality: data.location,
-      addressRegion: "Bali",
+      addressRegion: region,
       addressCountry: "ID",
     },
     geo: {
@@ -64,7 +72,7 @@ export default function LocationPage({ data }: { data: LocationPageData }) {
     },
     areaServed: {
       "@type": "Place",
-      name: `${data.location}, Bali`,
+      name: `${data.location}, ${region}`,
     },
     priceRange: "$$",
   };
@@ -102,7 +110,7 @@ export default function LocationPage({ data }: { data: LocationPageData }) {
         <section className="pt-28 pb-16 md:pt-36 md:pb-20 bg-gradient-to-b from-[#5e17eb]/10 to-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
-              <p className="text-[#5e17eb] font-semibold mb-3">Free Delivery Across {data.location}</p>
+              <p className="text-[#5e17eb] font-semibold mb-3">{isBali ? `Free Delivery Across ${data.location}` : `Delivery Available to ${data.location}`}</p>
               <h1 className="speakable-headline text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
                 {data.h1}
               </h1>
@@ -205,7 +213,7 @@ export default function LocationPage({ data }: { data: LocationPageData }) {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p className="text-[#ffdd27] font-semibold mb-2">Ready to Get Started?</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Party in {data.location}
+              {isBali ? `Party in ${data.location}` : `Book Your ${data.location} Event`}
             </h2>
             <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
               Send us a WhatsApp message and we&apos;ll get back to you with a custom quote for your {data.location} event.

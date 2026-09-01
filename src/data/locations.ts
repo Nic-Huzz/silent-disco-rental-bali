@@ -1,6 +1,7 @@
 export interface LocationPage {
   slug: string;
   location: string;
+  region?: string; // defaults to "Bali" if omitted
   title: string;
   description: string;
   keywords: string[];
@@ -148,6 +149,35 @@ export const locations: LocationPage[] = [
     directAnswer: {
       question: "Can I hire silent disco headsets for an event in Jimbaran?",
       answer: "Silent Disco Rental Bali offers free delivery of 300+ premium wireless headsets to all Jimbaran venues including AYANA Resort, Sundara Beach Club, and Four Seasons. Pricing from IDR 100,000 per headset (~$6.50 USD) with 3 LED colour-coded channels. Perfect for sunset parties and beachfront events. Book via WhatsApp at +62 822 6635 5322.",
+    },
+  },
+  {
+    slug: "silent-disco-jakarta",
+    location: "Jakarta",
+    region: "Indonesia",
+    title: "Silent Disco & Conference Headset Rental Jakarta | Trusted by AWS, IBM & Salesforce",
+    description: "Silent disco & conference headset rental in Jakarta, Indonesia. 800+ premium wireless headphones for corporate conferences, exhibitions & events. Trusted by AWS, IBM & Salesforce. Delivered from Bali with on-site support.",
+    keywords: [
+      "silent disco jakarta",
+      "silent disco rental jakarta",
+      "headset rental jakarta",
+      "conference headsets jakarta",
+      "conference headset rental jakarta",
+      "silent disco rental indonesia",
+      "corporate event headsets jakarta",
+      "exhibition headphones jakarta",
+      "simultaneous translation jakarta",
+      "wireless headset hire jakarta",
+    ],
+    h1: "Silent Disco & Conference Headset Rental Jakarta",
+    heroSubtitle: "Trusted by AWS, IBM & Salesforce for Jakarta's biggest international conferences",
+    intro: "Jakarta is Indonesia's business capital — the hub for international conferences, product launches, and large-scale corporate events. We've already delivered headsets to Jakarta's biggest brands: AWS (280 headsets), IBM (120 headsets), and Salesforce (150 headsets). Our premium wireless headsets are shipped from Bali with full on-site support, handling everything from multi-track conferences at JCC to corporate galas at five-star hotels. Whether you need simultaneous translation, multi-speaker exhibitions, or a private celebration — we've done it at scale in Jakarta.",
+    popularVenues: ["Jakarta Convention Center (JCC)", "ICE BSD", "The Ritz-Carlton Jakarta", "Hotel Indonesia Kempinski", "Fairmont Jakarta", "Balai Kartini", "The Westin Jakarta", "Shangri-La Jakarta"],
+    whatsappMessage: "Hi! I'm interested in silent disco headset rental for an event in Jakarta. Could you share availability and pricing?",
+    geo: { latitude: -6.2088, longitude: 106.8456 },
+    directAnswer: {
+      question: "Can I rent silent disco or conference headsets in Jakarta, Indonesia?",
+      answer: "Yes — Silent Disco Rental Bali delivers 800+ premium wireless headsets to Jakarta for corporate conferences, exhibitions, and events of any size. We've supplied headsets to AWS, IBM, and Salesforce conferences in Jakarta. Equipment is shipped from Bali with full on-site support. Multi-channel audio with LED colour-coding, perfect for simultaneous translation and multi-track presentations. Contact us via WhatsApp at +62 822 6635 5322 for a Jakarta quote.",
     },
   },
 ];
