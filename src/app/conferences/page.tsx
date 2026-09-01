@@ -40,7 +40,7 @@ export default function ConferencesPage() {
     {
       company: "Salesforce",
       location: "Jakarta",
-      headsets: 150,
+      headsets: 600,
       exhibits: 3,
       video: "/Conference Videos/salesforce-conference.mp4",
       videoType: "video/mp4",
@@ -145,7 +145,7 @@ export default function ConferencesPage() {
                 Conference Headset Rental Bali & Jakarta
               </h1>
               <p className="speakable-intro text-xl md:text-2xl text-gray-600 leading-relaxed">
-                Multi-track conferences, simultaneous translation, exhibitions. We&apos;ve delivered 800+ headsets to Indonesia&apos;s biggest international brands.
+                Multi-track conferences, simultaneous translation, exhibitions. We&apos;ve delivered 650+ headsets to Indonesia&apos;s biggest international brands.
               </p>
             </div>
           </div>

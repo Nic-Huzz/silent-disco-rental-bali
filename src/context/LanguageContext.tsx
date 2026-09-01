@@ -115,7 +115,7 @@ export const translations: Translations = {
   "calc.title": { en: "Rental Price Calculator", id: "Kalkulator Harga Sewa" },
   "calc.headsets": { en: "Number of Headsets:", id: "Jumlah Headset:" },
   "calc.headsets.note": {
-    en: "For enquiries of less than 20 headsets & more than 150 (our capacity is over 800) we'll create a custom package for you",
+    en: "For enquiries of less than 20 headsets & more than 150 (our capacity is over 650) we'll create a custom package for you",
     id: "Untuk pertanyaan kurang dari 20 headset & lebih dari 150 (kapasitas kami lebih dari 300) kami akan membuat paket khusus untuk Anda",
   },
   "calc.channels": { en: "How many music channels would you like?", id: "Berapa channel musik yang Anda inginkan?" },

@@ -19,7 +19,7 @@ export default function LocationPage({ data }: { data: LocationPageData }) {
       question: `How many headsets can I rent for an event in ${data.location}?`,
       answer: isBali
         ? `We stock over 300 premium wireless headsets. Whether you need 20 for an intimate gathering or 300+ for a large event in ${data.location}, we've got you covered.`
-        : `We stock over 800 premium wireless headsets. Whether you need 50 for a breakout session or 800+ for a full conference in ${data.location}, we've got you covered. We've already delivered 280 headsets to AWS, 120 to IBM, and 150 to Salesforce in Jakarta.`,
+        : `We stock over 650 premium wireless headsets. Whether you need 50 for a breakout session or 650+ for a full conference in ${data.location}, we've got you covered. We've already delivered 280 headsets to AWS, 120 to IBM, and 600 to Salesforce in Jakarta.`,
     },
     {
       question: `What's included in the silent disco rental in ${data.location}?`,
