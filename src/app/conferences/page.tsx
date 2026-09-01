@@ -215,7 +215,7 @@ export default function ConferencesPage() {
               {/* Salesforce */}
               <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg">
                 <Image
-                  src="/Conference Videos/salesforce-logo.svg"
+                  src="/Conference Videos/salesforce-logo.png"
                   alt="Salesforce logo - conference headset rental client in Jakarta"
                   width={160}
                   height={60}
