@@ -643,6 +643,125 @@
         padding-bottom: 5rem;
       }
     }
+
+    /* Testimonials */
+    .testimonials-section {
+      padding: 3rem 0;
+      background: var(--gray-light);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      .testimonials-grid { grid-template-columns: 1fr; }
+    }
+
+    .testimonial-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .testimonial-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .testimonial-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--purple-dark);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .testimonial-name {
+      font-weight: 700;
+      font-size: 0.9rem;
+      line-height: 1.2;
+    }
+
+    .testimonial-meta {
+      font-size: 0.75rem;
+      color: var(--gray-medium);
+    }
+
+    .testimonial-stars {
+      color: #fbbc04;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+
+    .testimonial-card p {
+      font-size: 0.85rem;
+      color: var(--gray-dark);
+      line-height: 1.6;
+    }
+
+    .reviews-badge {
+      text-align: center;
+      padding: 1rem 0 0;
+    }
+
+    .reviews-badge .stars {
+      font-size: 1.75rem;
+      letter-spacing: 2px;
+      margin-bottom: 0.25rem;
+    }
+
+    .reviews-badge p {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--gray-dark);
+    }
+
+    /* Client logos */
+    .client-logos {
+      padding: 2.5rem 0 1rem;
+    }
+
+    .client-logos .section-heading {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+      color: var(--gray-medium);
+      font-weight: 600;
+    }
+
+    .logo-strip {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .logo-strip img {
+      height: 40px;
+      object-fit: contain;
+      filter: grayscale(100%);
+      opacity: 0.5;
+      transition: all 0.3s;
+    }
+
+    .logo-strip img:hover {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
   </style>
 <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","xxjnchq70f");</script>
 </head>
@@ -672,8 +791,8 @@
             <h3>Premium Headphone</h3>
             <p class="product-desc">Hi-Fi wireless headphone with padded on-ear cups and LED channel indicator.</p>
             <ul class="product-specs">
+              <li>Noise-cancelling with Hi-Fi sound quality</li>
               <li>40mm professional-grade drivers</li>
-              <li>Cushion noise reduction</li>
               <li>3-channel LED (Red / Green / Blue)</li>
               <li>10+ hours battery life</li>
               <li>500m wireless range</li>
@@ -687,7 +806,7 @@
             <h3>Professional Transmitter</h3>
             <p class="product-desc">Broadcast-grade RF transmitter with multi-input support and 500m range.</p>
             <ul class="product-specs">
-              <li>AUX, RCA + XLR inputs. Connect any audio source</li>
+              <li>AUX, RCA + Bluetooth inputs. Connect any audio source</li>
               <li>500m open-air range</li>
               <li>Powers unlimited headphones</li>
               <li>Plug and play, no pairing needed</li>
@@ -777,6 +896,68 @@
             <li>The LED glow turns your event into content that guests share organically</li>
           </ul>
         </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Testimonials -->
+  <section class="testimonials-section">
+    <div class="container">
+      <h2 class="section-heading">What Our Clients Say</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-avatar" style="overflow:hidden;"><img src="/images/testimonials/testimonial-1.jpg" alt="Benjamin" style="width:100%;height:100%;object-fit:cover;"></div>
+            <div>
+              <div class="testimonial-name">Benjamin Allen</div>
+              <div class="testimonial-meta">Google Review</div>
+            </div>
+          </div>
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Nic was an absolute pleasure to work with. I'm so happy I found him when I was in Bali. He was responsive and was able to meet all my needs, and for a great price. He's definitely the go-to guy for all your silent disco needs.</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-avatar">Z</div>
+            <div>
+              <div class="testimonial-name">Zapheria Bell</div>
+              <div class="testimonial-meta">Google Review</div>
+            </div>
+          </div>
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>His silent disco headphones were such a big contribution to the magic at our last retreat. Not only are the headphones great quality, Nic also went out of his way to make sure the experience working with him was next level sensational. I can't wait for our next event to hire them again.</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-avatar">R</div>
+            <div>
+              <div class="testimonial-name">Roshni Dennis</div>
+              <div class="testimonial-meta">Google Review</div>
+            </div>
+          </div>
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Incredible service!! The headsets were in brand new condition and super easy to use and had EXCELLENT sound quality, great bass, volume and balanced clear sound. Highly recommend!!</p>
+        </div>
+      </div>
+      <div class="reviews-badge">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>71 Five Star reviews on Google and counting</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+
+    <!-- Client logos -->
+    <section class="client-logos">
+      <h2 class="section-heading">Trusted By</h2>
+      <div class="logo-strip">
+        <img src="/images/brands/logos/brand-logo-1.png" alt="Client">
+        <img src="/images/brands/logos/brand-logo-2.png" alt="Client">
+        <img src="/images/brands/logos/brand-logo-3.jpg" alt="Client">
+        <img src="/images/brands/logos/brand-logo-4.png" alt="Client">
+        <img src="/images/brands/logos/brand-logo-5.png" alt="Client">
+        <img src="/images/brands/logos/brand-logo-6.png" alt="Client">
       </div>
     </section>
 
