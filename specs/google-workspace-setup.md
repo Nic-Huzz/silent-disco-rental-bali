@@ -101,3 +101,44 @@ Value: v=DMARC1; p=quarantine; rua=mailto:huzz@nichuzz.com
 - Do NOT delete Cloudflare routing until Google MX records are live and tested
 - DNS propagation can take up to 48hrs but usually under 1hr on Cloudflare
 - Resend (used for automated/bulk emails) can remain — just update sending domain authentication after migration
+
+---
+
+## Gmail API + OAuth — Agent Email Sending
+
+Once Google Workspace is live, the AI agent can send emails directly via Gmail API (not Resend). This is the cleanest setup — emails look 100% human, full inbox trust, replies land in Gmail.
+
+### How it works
+- Agent connects to Gmail via Gmail API + OAuth
+- Huzz authorises once — agent gets a persistent token
+- Agent can send from `nic@buysilentdiscoheadphones.com` or any alias
+- Emails appear sent from actual Gmail — identical to a human sending
+
+This is how tools like Instantly, Lemlist, and Smartlead work under the hood.
+
+### What it takes to set up
+1. Google Workspace live (Step 1–4 above)
+2. Enable Gmail API in Google Cloud Console (free)
+3. Create OAuth 2.0 credentials (Client ID + Secret)
+4. Huzz authorises the agent once via OAuth flow
+5. Agent stores refresh token — sends forever without re-auth
+
+### Gmail sending limits
+- Google Workspace Business Starter: **2,000 emails/day**
+- More than enough for lead sequences and invoices
+
+### Full email setup once live
+
+| Task | How |
+|---|---|
+| Email sequences to leads | Agent → via Gmail API |
+| Replies to warm leads | Huzz → Gmail directly |
+| Invoices / quotes | Agent → via Gmail API |
+| Bulk cold outreach | Resend (separate sending reputation) |
+
+### Notes for the agent executing this
+- Gmail API docs: https://developers.google.com/gmail/api
+- Enable API at: https://console.cloud.google.com
+- Scopes needed: `gmail.send`, `gmail.compose`
+- OAuth type: Web application (with redirect URI for the agent's auth flow)
+- Store refresh token securely in environment variables (not hardcoded)
