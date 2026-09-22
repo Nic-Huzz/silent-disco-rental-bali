@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Your Quote, Rika - Silent Disco Rental Bali</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --purple-dark: #5e17eb;
+      --purple-light: #8b5cf6;
+      --gold: #ffdd27;
+      --white: #ffffff;
+      --gray-light: #f5f5f7;
+      --gray-medium: #86868b;
+      --gray-dark: #1d1d1f;
+      --navy: #11151c;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--gray-dark);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Hero */
+    .quote-hero {
+      background: linear-gradient(135deg, var(--purple-dark) 0%, #7c3aed 60%, var(--purple-light) 100%);
+      padding: 4.5rem 2rem 5rem;
+      text-align: center;
+      color: var(--white);
+      position: relative;
+    }
+
+    .quote-hero h1 {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .quote-hero .subtitle {
+      font-size: clamp(0.9rem, 3vw, 1.1rem);
+      opacity: 0.9;
+      font-weight: 400;
+    }
+
+    .quote-hero .context {
+      margin-top: 0.75rem;
+      font-size: 0.95rem;
+      font-style: italic;
+      opacity: 0.8;
+    }
+
+    .valid-badge {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1.25rem;
+      border-radius: 100px;
+      background: rgba(255, 221, 39, 0.22);
+      border: 1px solid rgba(255, 221, 39, 0.35);
+      color: var(--gold);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+
+    /* Wave divider */
+    .wave-divider {
+      margin-top: -2px;
+      line-height: 0;
+    }
+
+    /* Container */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Section headings */
+    .section-heading {
+      font-size: 1.75rem;
+      font-weight: 800;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    /* Quote summary */
+    .quote-summary {
+      background: var(--gray-light);
+      border-radius: 16px;
+      padding: 2rem;
+      margin: 2.5rem 0;
+      border-left: 4px solid var(--purple-dark);
+    }
+
+    .line-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      font-size: 1rem;
+    }
+
+    .line-item:last-of-type {
+      border-bottom: none;
+    }
+
+    .line-item .label {
+      color: var(--gray-dark);
+    }
+
+    .line-item .value {
+      font-weight: 600;
+      color: var(--gray-dark);
+      white-space: nowrap;
+    }
+
+    .line-item .unit-price {
+      font-size: 0.8rem;
+      color: var(--gray-medium);
+      font-weight: 400;
+    }
+
+    .line-total {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 0 0;
+      margin-top: 0.5rem;
+      border-top: 2px solid var(--purple-dark);
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .line-total .label {
+      font-weight: 700;
+    }
+
+    .line-total .value {
+      color: var(--purple-dark);
+    }
+
+    .deposit-note {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: var(--gray-medium);
+      line-height: 1.6;
+    }
+
+    /* Optional add-on */
+    .optional-addon {
+      margin-top: 1.25rem;
+      padding: 1rem 1.25rem;
+      background: var(--white);
+      border: 2px solid rgba(94, 23, 235, 0.15);
+      border-radius: 12px;
+      cursor: pointer;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .optional-addon:hover {
+      border-color: rgba(94, 23, 235, 0.35);
+    }
+
+    .optional-addon.selected {
+      border-color: var(--purple-dark);
+      box-shadow: 0 0 0 1px var(--purple-dark);
+    }
+
+    .optional-addon label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      gap: 0.75rem;
+    }
+
+    .optional-addon .addon-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .optional-addon input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      accent-color: var(--purple-dark);
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .optional-addon .addon-label {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .optional-addon .addon-desc {
+      font-size: 0.8rem;
+      color: var(--gray-medium);
+      margin-top: 0.15rem;
+    }
+
+    .optional-addon .addon-price {
+      font-weight: 700;
+      color: var(--purple-dark);
+      white-space: nowrap;
+      font-size: 0.95rem;
+    }
+
+    .optional-badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      background: rgba(94, 23, 235, 0.1);
+      color: var(--purple-dark);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+
+    /* Product cards */
+    .products {
+      padding: 2.5rem 0;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 600px) {
+      .product-grid { grid-template-columns: 1fr; }
+    }
+
+    .product-card {
+      background: var(--white);
+      border: 2px solid var(--gray-light);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: box-shadow 0.3s;
+    }
+
+    .product-card:hover {
+      box-shadow: 0 8px 30px rgba(94, 23, 235, 0.12);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: contain;
+      background: var(--gray-light);
+      padding: 1.5rem;
+    }
+
+    .product-card-body {
+      padding: 1.25rem;
+    }
+
+    .product-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .product-card .product-desc {
+      font-size: 0.85rem;
+      color: var(--gray-medium);
+      margin-bottom: 0.75rem;
+      line-height: 1.5;
+    }
+
+    .product-card .product-specs {
+      list-style: none;
+      padding: 0;
+      font-size: 0.875rem;
+      color: var(--gray-dark);
+    }
+
+    .product-card .product-specs li {
+      padding: 0.35rem 0;
+      border-bottom: 1px solid var(--gray-light);
+    }
+
+    .product-card .product-specs li::before {
+      content: '\2713';
+      color: var(--purple-dark);
+      font-weight: 700;
+      margin-right: 0.5rem;
+    }
+
+    .product-card .product-specs li:last-child {
+      border-bottom: none;
+    }
+
+    /* What's included */
+    .included {
+      padding: 2.5rem 0;
+    }
+
+    .included-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .included-grid { grid-template-columns: 1fr; }
+    }
+
+    .included-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 1rem;
+      background: var(--gray-light);
+      border-radius: 12px;
+    }
+
+    .included-item .icon {
+      font-size: 1.25rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .included-item p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .included-item strong {
+      display: block;
+      margin-bottom: 0.15rem;
+    }
+
+    /* Video section */
+    .video-section {
+      padding: 2.5rem 0;
+    }
+
+    .video-feature {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    .video-feature:last-child {
+      margin-bottom: 0;
+    }
+
+    .video-feature.reverse {
+      direction: rtl;
+    }
+
+    .video-feature.reverse > * {
+      direction: ltr;
+    }
+
+    @media (max-width: 600px) {
+      .video-feature {
+        grid-template-columns: 1fr;
+      }
+      .video-feature.reverse {
+        direction: ltr;
+      }
+    }
+
+    .video-feature video {
+      width: 100%;
+      border-radius: 16px;
+      aspect-ratio: 9/16;
+      object-fit: cover;
+      background: var(--navy);
+      max-height: 500px;
+    }
+
+    .video-feature-text h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin-bottom: 0.35rem;
+    }
+
+    .video-feature-text .tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--purple-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border-left: 3px solid var(--gold);
+      padding-left: 0.5rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+
+    .video-feature-text ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .video-feature-text li {
+      padding: 0.5rem 0;
+      font-size: 0.9rem;
+      color: var(--gray-dark);
+      line-height: 1.5;
+      border-bottom: 1px solid var(--gray-light);
+    }
+
+    .video-feature-text li:last-child {
+      border-bottom: none;
+    }
+
+    .video-feature-text li::before {
+      content: '\2713';
+      color: var(--purple-dark);
+      font-weight: 700;
+      margin-right: 0.5rem;
+    }
+
+    /* Timeline */
+    .timeline-section {
+      background: var(--navy);
+      padding: 3.5rem 0;
+      color: var(--white);
+    }
+
+    .timeline-section .section-heading {
+      color: var(--white);
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 600px;
+      margin: 0 auto;
+      padding-left: 3rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 18px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: rgba(255,255,255,0.15);
+    }
+
+    .timeline-step {
+      position: relative;
+      padding-bottom: 2.5rem;
+    }
+
+    .timeline-step:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -3rem;
+      top: 0;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(94, 23, 235, 0.15);
+      border: 2px solid rgba(94, 23, 235, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .timeline-step.active .timeline-dot {
+      background: linear-gradient(135deg, var(--purple-dark), var(--purple-light));
+      border-color: transparent;
+      color: var(--white);
+      box-shadow: 0 0 20px rgba(94, 23, 235, 0.4);
+    }
+
+    .timeline-days {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, var(--purple-light), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.25rem;
+    }
+
+    .timeline-body h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .timeline-body p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.5;
+    }
+
+    /* Testimonials */
+    .testimonials-section {
+      padding: 3rem 0;
+      background: var(--gray-light);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      .testimonials-grid { grid-template-columns: 1fr; }
+    }
+
+    .testimonial-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .testimonial-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .testimonial-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--purple-dark);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .testimonial-name {
+      font-weight: 700;
+      font-size: 0.9rem;
+      line-height: 1.2;
+    }
+
+    .testimonial-meta {
+      font-size: 0.75rem;
+      color: var(--gray-medium);
+    }
+
+    .testimonial-stars {
+      color: #fbbc04;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+
+    .testimonial-card p {
+      font-size: 0.85rem;
+      color: var(--gray-dark);
+      line-height: 1.6;
+    }
+
+    .reviews-badge {
+      text-align: center;
+      padding: 1rem 0 0;
+    }
+
+    .reviews-badge .stars {
+      font-size: 1.75rem;
+      letter-spacing: 2px;
+      margin-bottom: 0.25rem;
+    }
+
+    .reviews-badge p {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--gray-dark);
+    }
+
+    /* Support section */
+    .support-section {
+      padding: 3.5rem 0;
+    }
+
+    .support-subtitle {
+      text-align: center;
+      color: var(--gray-medium);
+      font-size: 0.95rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .support-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 600px) {
+      .support-grid { grid-template-columns: 1fr; }
+    }
+
+    .support-card {
+      padding: 1.5rem;
+      border-radius: 16px;
+      background: var(--gray-light);
+    }
+
+    .support-icon {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .support-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+    }
+
+    .support-card p {
+      font-size: 0.85rem;
+      color: var(--gray-medium);
+      line-height: 1.6;
+    }
+
+    /* Client logos */
+    .client-logos {
+      padding: 2.5rem 0 1rem;
+    }
+
+    .client-logos .section-heading {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+      color: var(--gray-medium);
+      font-weight: 600;
+    }
+
+    .logo-strip {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .logo-strip img {
+      height: 40px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    @media (max-width: 600px) {
+      .logo-strip { gap: 1.25rem; }
+      .logo-strip img { height: 30px; }
+    }
+
+    /* CTA */
+    .quote-cta {
+      background: linear-gradient(135deg, var(--purple-dark) 0%, #7c3aed 60%, var(--purple-light) 100%);
+      padding: 3.5rem 2rem;
+      text-align: center;
+      color: var(--white);
+    }
+
+    .quote-cta h2 {
+      font-size: 1.75rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .quote-cta p {
+      font-size: 0.95rem;
+      opacity: 0.85;
+      margin-bottom: 1.5rem;
+    }
+
+    .quote-cta .trust-line {
+      font-size: 0.8rem;
+      opacity: 0.6;
+      margin-top: 1.25rem;
+    }
+
+    .quote-cta .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #25D366;
+      color: var(--white);
+      padding: 1rem 2.5rem;
+      border-radius: 100px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+    }
+
+    .quote-cta .btn:hover {
+      background: #1da851;
+      box-shadow: 0 6px 30px rgba(37, 211, 102, 0.45);
+    }
+
+    .quote-cta .btn svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+    }
+
+    /* Footer */
+    .quote-footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.8rem;
+      color: var(--gray-medium);
+    }
+
+    .quote-footer a {
+      color: var(--purple-dark);
+      text-decoration: none;
+    }
+
+    /* Sticky mobile CTA */
+    .sticky-cta {
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      .sticky-cta {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: var(--navy);
+        padding: 0.75rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 100;
+        box-shadow: 0 -4px 20px rgba(0,0,0,0.25);
+      }
+
+      .sticky-cta .sticky-price {
+        color: var(--white);
+        font-weight: 700;
+        font-size: 1.1rem;
+      }
+
+      .sticky-cta .sticky-price span {
+        display: block;
+        font-size: 0.7rem;
+        font-weight: 400;
+        color: var(--gray-medium);
+      }
+
+      .sticky-cta .sticky-btn {
+        background: #25D366;
+        color: var(--white);
+        padding: 0.65rem 1.25rem;
+        border-radius: 100px;
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .sticky-cta .sticky-btn svg {
+        width: 16px;
+        height: 16px;
+        fill: currentColor;
+      }
+
+      .quote-footer {
+        padding-bottom: 5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <div class="quote-hero">
+    <h1>Your Quote, Rika</h1>
+    <p class="subtitle">30 Headphones &middot; 2 Days &middot; Bali</p>
+    <p class="context">Conference headphone rental</p>
+    <span class="valid-badge">Valid for 14 days &middot; Prepared 22 September 2026</span>
+  </div>
+
+  <!-- Wave divider -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg"><path fill="#ffffff" d="M0,40 C360,80 1080,0 1440,40 L1440,60 L0,60 Z"/></svg>
+  </div>
+
+  <div class="container">
+
+    <!-- Products -->
+    <section class="products">
+      <h2 class="section-heading">Your Equipment</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="../images/product-showcase.jpg" alt="Wireless Noise-Cancelling Headphone">
+          <div class="product-card-body">
+            <h3>Wireless Noise-Cancelling Headphone</h3>
+            <p class="product-desc">Professional-grade wireless headphone with cushion noise cancellation. Perfect for conferences, presentations, and multi-language events.</p>
+            <ul class="product-specs">
+              <li>40mm professional-grade drivers</li>
+              <li>Cushion noise cancellation</li>
+              <li>Crystal clear audio for voice + music</li>
+              <li>10+ hours battery life</li>
+              <li>Adjustable, comfortable over-ear fit</li>
+              <li>Lightweight for extended sessions</li>
+            </ul>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="assets/equipment-transmitter.jpg" alt="Professional RF Transmitter">
+          <div class="product-card-body">
+            <h3>Professional Transmitter</h3>
+            <p class="product-desc">Broadcast-grade RF transmitter. Your presenter's voice and any audio source are broadcast wirelessly to all headphones simultaneously.</p>
+            <ul class="product-specs">
+              <li>AUX input for any audio source</li>
+              <li>Microphone input for live voice</li>
+              <li>500m open-air range</li>
+              <li>Powers unlimited headphones</li>
+              <li>Plug and play, no pairing needed</li>
+              <li>Compact and portable</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Videos -->
+    <section class="video-section">
+      <h2 class="section-heading">See Them in Action</h2>
+
+      <div class="video-feature">
+        <video autoplay muted loop playsinline>
+          <source src="assets/conference-salesforce.mp4" type="video/mp4">
+        </video>
+        <div class="video-feature-text">
+          <span class="tag">Salesforce Conference</span>
+          <h3>Corporate Events, Elevated</h3>
+          <ul>
+            <li>Wireless headphones for keynotes, panels, and breakout sessions</li>
+            <li>Multiple audio channels for simultaneous translation</li>
+            <li>No speakers needed - clean, professional setup</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="video-feature reverse">
+        <video autoplay muted loop playsinline>
+          <source src="assets/conference-ibm.mp4" type="video/mp4">
+        </video>
+        <div class="video-feature-text">
+          <span class="tag">IBM Conference</span>
+          <h3>Multi-Session, Zero Interference</h3>
+          <ul>
+            <li>Run parallel sessions in the same space without sound bleed</li>
+            <li>Attendees switch channels to choose their session</li>
+            <li>Perfect for exhibitions, expos, and multi-track conferences</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="video-feature">
+        <video autoplay muted loop playsinline>
+          <source src="assets/conference-aws.mp4" type="video/mp4">
+        </video>
+        <div class="video-feature-text">
+          <span class="tag">AWS Conference</span>
+          <h3>Crystal Clear, Every Seat</h3>
+          <ul>
+            <li>Every attendee hears perfectly, no matter the room size or acoustics</li>
+            <li>Noise cancellation eliminates distractions from adjacent sessions</li>
+            <li>Scalable from 10 to 650+ headphones</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- What's included -->
+    <section class="included">
+      <h2 class="section-heading">What's Included</h2>
+      <div class="included-grid">
+        <div class="included-item">
+          <span class="icon">🎧</span>
+          <p><strong>30 Wireless Headphones</strong> Noise-cancelling, fully charged and ready for each day. Crystal clear audio for every attendee.</p>
+        </div>
+        <div class="included-item">
+          <span class="icon">📡</span>
+          <p><strong>1 Transmitter</strong> Broadcasts your audio to all headphones wirelessly. Plug and play.</p>
+        </div>
+        <div class="included-item">
+          <span class="icon">🚚</span>
+          <p><strong>Delivery &amp; Collection</strong> We deliver to your venue and collect after your event. Hassle-free.</p>
+        </div>
+        <div class="included-item">
+          <span class="icon">🔋</span>
+          <p><strong>Fully Charged Daily</strong> Every headphone arrives fully charged and tested for each day of your event.</p>
+        </div>
+        <div class="included-item">
+          <span class="icon">💬</span>
+          <p><strong>WhatsApp Support</strong> Direct line to Nic for setup help, troubleshooting, and any questions.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote Summary -->
+    <div class="quote-summary">
+      <h2 class="section-heading" style="text-align:left; margin-bottom:1.5rem;">Quote Summary</h2>
+      <div class="line-item">
+        <span class="label">30x Headphone Rental &times; 2 days <span class="unit-price">(100,000 IDR / headphone / day)</span></span>
+        <span class="value">6,000,000 IDR</span>
+      </div>
+      <div class="line-item">
+        <span class="label">1x Transmitter &times; 2 days <span class="unit-price">(500,000 IDR / day)</span></span>
+        <span class="value">1,000,000 IDR</span>
+      </div>
+      <div class="line-item">
+        <span class="label">Delivery &amp; Collection</span>
+        <span class="value">TBC</span>
+      </div>
+      <div class="line-total">
+        <span class="label">Total</span>
+        <span class="value" id="quote-total">7,000,000 IDR</span>
+      </div>
+
+      <!-- Optional on-site support -->
+      <div class="optional-addon" id="addon-support">
+        <label>
+          <div class="addon-left">
+            <input type="checkbox" id="support-checkbox">
+            <div>
+              <div class="addon-label">On-Site Support <span class="optional-badge">Optional</span></div>
+              <div class="addon-desc">Our team stays on-site to manage equipment, troubleshoot, and ensure everything runs smoothly both days.</div>
+            </div>
+          </div>
+          <span class="addon-price">+1,000,000 IDR</span>
+        </label>
+      </div>
+
+      <p class="deposit-note">Price includes everything listed above - no hidden fees. Delivery cost to be confirmed based on venue location. Rental covers both days. 50% deposit required to secure your booking. Any headphones not returned in the condition they were received will incur a 500,000 IDR + $60 USD replacement fee per unit.</p>
+    </div>
+  </div>
+
+  <!-- Timeline -->
+  <section class="timeline-section">
+    <div class="container">
+      <h2 class="section-heading">How It Works</h2>
+      <div class="timeline">
+        <div class="timeline-step active">
+          <div class="timeline-dot">1</div>
+          <div class="timeline-body">
+            <div class="timeline-days">Today</div>
+            <h3>Confirm Your Booking</h3>
+            <p>Reply on WhatsApp with your event dates and venue. We'll lock in your equipment.</p>
+          </div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-dot">2</div>
+          <div class="timeline-body">
+            <div class="timeline-days">Before your event</div>
+            <h3>Setup Planning</h3>
+            <p>We'll confirm audio sources, mic preferences, and venue layout. Everything planned in advance so day one runs perfectly.</p>
+          </div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-dot">3</div>
+          <div class="timeline-body">
+            <div class="timeline-days">Day 1</div>
+            <h3>We Deliver &amp; Set Up</h3>
+
+            <p>We arrive at your venue, set up the transmitter and mic, test the audio, and make sure everything sounds perfect before your attendees arrive.</p>
+          </div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-dot">4</div>
+          <div class="timeline-body">
+            <div class="timeline-days">After Day 2</div>
+            <h3>We Collect Everything</h3>
+            <p>Hand the headphones and equipment back to us. That's it - you focus on your event, we handle the rest.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials-section">
+    <div class="container">
+      <h2 class="section-heading">What Our Clients Say</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-avatar">Z</div>
+            <div>
+              <div class="testimonial-name">Zapheria Bell</div>
+              <div class="testimonial-meta">Google Review</div>
+            </div>
+          </div>
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>His silent disco headphones were such a big contribution to the magic at our last retreat. Not only are the headphones great quality, Nic also went out of his way to make sure the experience working with him was next level sensational.</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-avatar">R</div>
+            <div>
+              <div class="testimonial-name">Roshni Dennis</div>
+              <div class="testimonial-meta">Google Review</div>
+            </div>
+          </div>
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Incredible service!! The headsets were in brand new condition and super easy to use and had EXCELLENT sound quality, great bass, volume and balanced clear sound. Highly recommend!!</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-avatar">B</div>
+            <div>
+              <div class="testimonial-name">Benjamin Allen</div>
+              <div class="testimonial-meta">Google Review</div>
+            </div>
+          </div>
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Nic was an absolute pleasure to work with. He was responsive and was able to meet all my needs, and for a great price. He's definitely the go-to guy for all your silent disco needs.</p>
+        </div>
+      </div>
+      <div class="reviews-badge">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>71 Five Star reviews on Google and counting</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+
+    <!-- Client logos -->
+    <section class="client-logos">
+      <h2 class="section-heading">Trusted By</h2>
+      <div class="logo-strip">
+        <img src="../images/brands/logos/brand-logo-1.png" alt="Sundays Beach Club">
+        <img src="../images/brands/logos/brand-logo-2.png" alt="Echo Beach">
+        <img src="../images/brands/logos/brand-logo-3.jpg" alt="The Istana">
+        <img src="../images/brands/logos/brand-logo-4.png" alt="Alchemy">
+        <img src="../images/brands/logos/brand-logo-5.png" alt="Mantra">
+        <img src="../images/brands/logos/brand-logo-6.png" alt="AWS">
+        <img src="../images/brands/logos/brand-logo-7-salesforce.png" alt="Salesforce">
+        <img src="../images/brands/logos/apurva-kempinski.png" alt="The Apurva Kempinski Bali">
+      </div>
+    </section>
+
+    <!-- Support section -->
+    <section class="support-section">
+      <h2 class="section-heading">Why Rent With Us</h2>
+      <p class="support-subtitle">Bali's premium wireless headphone rental service.</p>
+      <div class="support-grid">
+        <div class="support-card">
+          <div class="support-icon">🏝️</div>
+          <h3>Based in Bali</h3>
+          <p>Local team based in Bali. We know the venues and we're always nearby for support.</p>
+        </div>
+        <div class="support-card">
+          <div class="support-icon">🏢</div>
+          <h3>Corporate Event Experience</h3>
+          <p>We've supported conferences for AWS, IBM, and Salesforce. We understand what corporate events need.</p>
+        </div>
+        <div class="support-card">
+          <div class="support-icon">🎧</div>
+          <h3>Premium Equipment</h3>
+          <p>Professional noise-cancelling headphones with crystal clear audio. Every attendee hears perfectly.</p>
+        </div>
+        <div class="support-card">
+          <div class="support-icon">🧑‍💻</div>
+          <h3>Full-Service Setup</h3>
+          <p>We deliver, set up, test the sound, and collect after. You focus entirely on your event.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- CTA -->
+  <div class="quote-cta">
+    <h2>Ready to Get Started?</h2>
+    <p>Reply on WhatsApp to confirm your booking or ask any questions.</p>
+    <a href="https://wa.me/6282266355322?text=Hi%20Nic%2C%20this%20is%20Rika.%20I%27d%20like%20to%20confirm%20the%20headphone%20rental%20for%202%20days" class="btn">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Chat on WhatsApp
+    </a>
+    <p class="trust-line">Trusted by 300+ events across Bali</p>
+  </div>
+
+  <!-- Footer -->
+  <div class="quote-footer">
+    <p><a href="https://silentdiscorentalbali.com">silentdiscorentalbali.com</a> &middot; Premium wireless headphone rentals in Bali</p>
+  </div>
+
+  <!-- Sticky mobile CTA -->
+  <div class="sticky-cta">
+    <div class="sticky-price">
+      <span id="sticky-total">7,000,000 IDR</span> <span>2-day rental</span>
+    </div>
+    <a href="https://wa.me/6282266355322?text=Hi%20Nic%2C%20this%20is%20Rika.%20I%27d%20like%20to%20confirm%20the%20headphone%20rental%20for%202%20days" class="sticky-btn">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Chat
+    </a>
+  </div>
+
+  <script>
+    var BASE_TOTAL = 7000000;
+    var SUPPORT_COST = 1000000;
+
+    function formatIDR(amount) {
+      return amount.toLocaleString('en-US') + ' IDR';
+    }
+
+    function updateTotal() {
+      var checkbox = document.getElementById('support-checkbox');
+      var addon = document.getElementById('addon-support');
+      var totalEl = document.getElementById('quote-total');
+      var stickyEl = document.getElementById('sticky-total');
+
+      if (checkbox.checked) {
+        addon.classList.add('selected');
+        totalEl.textContent = formatIDR(BASE_TOTAL + SUPPORT_COST);
+        stickyEl.textContent = formatIDR(BASE_TOTAL + SUPPORT_COST);
+      } else {
+        addon.classList.remove('selected');
+        totalEl.textContent = formatIDR(BASE_TOTAL);
+        stickyEl.textContent = formatIDR(BASE_TOTAL);
+      }
+    }
+
+    document.getElementById('support-checkbox').addEventListener('change', updateTotal);
+    document.getElementById('addon-support').addEventListener('click', function(e) {
+      if (e.target.type !== 'checkbox') {
+        e.preventDefault();
+        var cb = document.getElementById('support-checkbox');
+        cb.checked = !cb.checked;
+        updateTotal();
+      }
+    });
+  </script>
+
+</body>
+</html>
