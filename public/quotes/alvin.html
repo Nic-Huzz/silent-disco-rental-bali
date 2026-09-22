@@ -957,10 +957,10 @@
       </div>
 
       <!-- Optional on-site support -->
-      <div class="optional-addon" id="addon-support" onclick="toggleSupport()">
+      <div class="optional-addon" id="addon-support">
         <label>
           <div class="addon-left">
-            <input type="checkbox" id="support-checkbox" onclick="event.stopPropagation(); toggleSupport()">
+            <input type="checkbox" id="support-checkbox">
             <div>
               <div class="addon-label">On-Site Support <span class="optional-badge">Optional</span></div>
               <div class="addon-desc">Our team stays on-site to manage equipment, troubleshoot, and ensure everything runs smoothly all 3 days.</div>
@@ -1142,16 +1142,11 @@
       return amount.toLocaleString('en-US') + ' IDR';
     }
 
-    function toggleSupport() {
+    function updateTotal() {
       var checkbox = document.getElementById('support-checkbox');
       var addon = document.getElementById('addon-support');
       var totalEl = document.getElementById('quote-total');
       var stickyEl = document.getElementById('sticky-total');
-
-      // If called from the div click, toggle the checkbox
-      if (event && event.currentTarget === addon) {
-        checkbox.checked = !checkbox.checked;
-      }
 
       if (checkbox.checked) {
         addon.classList.add('selected');
@@ -1163,6 +1158,16 @@
         stickyEl.textContent = formatIDR(BASE_TOTAL);
       }
     }
+
+    document.getElementById('support-checkbox').addEventListener('change', updateTotal);
+    document.getElementById('addon-support').addEventListener('click', function(e) {
+      if (e.target.type !== 'checkbox') {
+        e.preventDefault();
+        var cb = document.getElementById('support-checkbox');
+        cb.checked = !cb.checked;
+        updateTotal();
+      }
+    });
   </script>
 
 </body>
