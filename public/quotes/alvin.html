@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Your Quote, Alvin - Silent Disco Rental Bali</title>
+  <title>Your Invoice, Alvin - Silent Disco Rental Bali</title>
   <link rel="icon" href="/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -795,16 +795,27 @@
         padding-bottom: 5rem;
       }
     }
+    /* Print styles */
+    @media print {
+      .sticky-cta, .quote-cta, .video-section, .testimonials-section, .support-section, .client-logos, .timeline-section, .wave-divider { display: none !important; }
+      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .quote-hero { padding: 2rem 1.5rem 2.5rem; }
+      .container { max-width: 100%; }
+      .quote-summary { break-inside: avoid; }
+      .product-grid { break-inside: avoid; }
+      .included-grid { break-inside: avoid; }
+      .quote-footer { position: fixed; bottom: 0; width: 100%; }
+    }
   </style>
 </head>
 <body>
 
   <!-- Hero -->
   <div class="quote-hero">
-    <h1>Your Quote, Alvin</h1>
-    <p class="subtitle">15 Headphones &middot; 3 Days &middot; Bali</p>
+    <h1>Your Invoice, Alvin</h1>
+    <p class="subtitle">25 Headphones &middot; 3 Days &middot; Bali</p>
     <p class="context">Conference headphone rental for Bproudidea Media Kreasi</p>
-    <span class="valid-badge">Valid for 14 days &middot; Prepared 22 September 2026</span>
+    <span class="valid-badge">Invoice &middot; Prepared 22 September 2026</span>
   </div>
 
   <!-- Wave divider -->
@@ -907,7 +918,7 @@
       <div class="included-grid">
         <div class="included-item">
           <span class="icon">🎧</span>
-          <p><strong>15 Wireless Headphones</strong> Noise-cancelling, fully charged and ready for each day. Crystal clear audio for every attendee.</p>
+          <p><strong>25 Wireless Headphones</strong> Noise-cancelling, fully charged and ready for each day. Crystal clear audio for every attendee.</p>
         </div>
         <div class="included-item">
           <span class="icon">📡</span>
@@ -934,10 +945,10 @@
 
     <!-- Quote Summary -->
     <div class="quote-summary">
-      <h2 class="section-heading" style="text-align:left; margin-bottom:1.5rem;">Quote Summary</h2>
+      <h2 class="section-heading" style="text-align:left; margin-bottom:1.5rem;">Invoice Summary</h2>
       <div class="line-item">
-        <span class="label">15x Headphone Rental &times; 3 days <span class="unit-price">(100,000 IDR / headphone / day)</span></span>
-        <span class="value">4,500,000 IDR</span>
+        <span class="label">25x Headphone Rental &times; 3 days <span class="unit-price">(100,000 IDR / headphone / day)</span></span>
+        <span class="value">7,500,000 IDR</span>
       </div>
       <div class="line-item">
         <span class="label">1x Transmitter &times; 3 days <span class="unit-price">(500,000 IDR / day)</span></span>
@@ -948,26 +959,22 @@
         <span class="value">300,000 IDR</span>
       </div>
       <div class="line-item">
-        <span class="label">Delivery &amp; Collection <span class="unit-price">(100,000 IDR each way)</span></span>
-        <span class="value">200,000 IDR</span>
+        <span class="label">On-Site Support &times; 3 days <span class="unit-price">(500,000 IDR / day)</span></span>
+        <span class="value">1,500,000 IDR</span>
       </div>
       <div class="line-total">
         <span class="label">Total</span>
-        <span class="value" id="quote-total">6,500,000 IDR</span>
+        <span class="value" id="quote-total">10,800,000 IDR</span>
       </div>
 
-      <!-- Optional on-site support -->
-      <div class="optional-addon" id="addon-support">
-        <label>
-          <div class="addon-left">
-            <input type="checkbox" id="support-checkbox">
-            <div>
-              <div class="addon-label">On-Site Support <span class="optional-badge">Optional</span></div>
-              <div class="addon-desc">Our team stays on-site to manage equipment, troubleshoot, and ensure everything runs smoothly all 3 days.</div>
-            </div>
-          </div>
-          <span class="addon-price">+1,500,000 IDR</span>
-        </label>
+      <!-- Payment details -->
+      <div style="margin-top: 1.25rem; padding: 1rem 1.25rem; background: var(--white); border: 2px solid rgba(94, 23, 235, 0.15); border-radius: 12px;">
+        <div style="font-weight: 700; font-size: 0.95rem; margin-bottom: 0.5rem;">Payment Details</div>
+        <div style="font-size: 0.85rem; color: var(--gray-dark); line-height: 1.8;">
+          <div><strong>Bank:</strong> OCBC NISP</div>
+          <div><strong>Account Number:</strong> 1658-1007-3750</div>
+          <div><strong>Account Name:</strong> Nicholas Hurrell</div>
+        </div>
       </div>
 
       <p class="deposit-note">Price includes everything listed above - no hidden fees. Rental covers all 3 days. 50% deposit required to secure your booking. Any headphones not returned in the condition they were received will incur a 500,000 IDR + $60 USD replacement fee per unit.</p>
@@ -1111,6 +1118,11 @@
   <div class="quote-cta">
     <h2>Ready to Get Started?</h2>
     <p>Reply on WhatsApp to confirm your booking or ask any questions.</p>
+    <button onclick="window.print()" class="btn" style="border:none; cursor:pointer; background:var(--white); color:var(--purple-dark); margin-bottom:1rem;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download Invoice
+    </button>
+    <br>
     <a href="https://wa.me/6282266355322?text=Hi%20Nic%2C%20this%20is%20Alvin%20from%20Bproudidea%20Media%20Kreasi.%20I%27d%20like%20to%20confirm%20the%20headphone%20rental%20for%203%20days" class="btn">
       <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       Chat on WhatsApp
@@ -1126,7 +1138,7 @@
   <!-- Sticky mobile CTA -->
   <div class="sticky-cta">
     <div class="sticky-price">
-      <span id="sticky-total">6,500,000 IDR</span> <span>3-day rental</span>
+      <span id="sticky-total">10,800,000 IDR</span> <span>3-day rental</span>
     </div>
     <a href="https://wa.me/6282266355322?text=Hi%20Nic%2C%20this%20is%20Alvin%20from%20Bproudidea%20Media%20Kreasi.%20I%27d%20like%20to%20confirm%20the%20headphone%20rental%20for%203%20days" class="sticky-btn">
       <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -1134,41 +1146,6 @@
     </a>
   </div>
 
-  <script>
-    var BASE_TOTAL = 6500000;
-    var SUPPORT_COST = 1500000;
-
-    function formatIDR(amount) {
-      return amount.toLocaleString('en-US') + ' IDR';
-    }
-
-    function updateTotal() {
-      var checkbox = document.getElementById('support-checkbox');
-      var addon = document.getElementById('addon-support');
-      var totalEl = document.getElementById('quote-total');
-      var stickyEl = document.getElementById('sticky-total');
-
-      if (checkbox.checked) {
-        addon.classList.add('selected');
-        totalEl.textContent = formatIDR(BASE_TOTAL + SUPPORT_COST);
-        stickyEl.textContent = formatIDR(BASE_TOTAL + SUPPORT_COST);
-      } else {
-        addon.classList.remove('selected');
-        totalEl.textContent = formatIDR(BASE_TOTAL);
-        stickyEl.textContent = formatIDR(BASE_TOTAL);
-      }
-    }
-
-    document.getElementById('support-checkbox').addEventListener('change', updateTotal);
-    document.getElementById('addon-support').addEventListener('click', function(e) {
-      if (e.target.type !== 'checkbox') {
-        e.preventDefault();
-        var cb = document.getElementById('support-checkbox');
-        cb.checked = !cb.checked;
-        updateTotal();
-      }
-    });
-  </script>
 
 </body>
 </html>
