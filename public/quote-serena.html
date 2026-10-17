@@ -669,6 +669,54 @@
       height: 40px;
       object-fit: contain;
     }
+
+    /* Payment details */
+    .payment-section {
+      margin: 2.5rem 0;
+    }
+
+    .payment-option {
+      background: var(--gray-light);
+      border-radius: 16px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .payment-option h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--gray-dark);
+    }
+
+    .payment-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem 2rem;
+    }
+
+    @media (max-width: 600px) {
+      .payment-grid { grid-template-columns: 1fr; }
+    }
+
+    .payment-field label {
+      display: block;
+      font-size: 0.7rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--gray-medium);
+      margin-bottom: 0.2rem;
+    }
+
+    .payment-field p {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--gray-dark);
+    }
+
+    .payment-field.full {
+      grid-column: 1 / -1;
+    }
   </style>
 <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","xxjnchq70f");</script>
 </head>
@@ -883,6 +931,55 @@
       </div>
       <p class="shipping-note">4-day rental period. Equipment delivered to and collected from your venue in Ubud.</p>
     </div>
+
+    <!-- Payment Details -->
+    <section class="payment-section">
+      <h2 class="section-heading">Payment Details</h2>
+
+      <div class="payment-option">
+        <h3>EUR — Wise (SEPA / International)</h3>
+        <div class="payment-grid">
+          <div class="payment-field">
+            <label>Account Name</label>
+            <p>Nicholas Chusak Hurrell</p>
+          </div>
+          <div class="payment-field">
+            <label>IBAN</label>
+            <p>BE91 9676 7810 8976</p>
+          </div>
+          <div class="payment-field">
+            <label>Swift / BIC</label>
+            <p>TRWIBEB1XXX</p>
+          </div>
+          <div class="payment-field">
+            <label>Bank</label>
+            <p>Wise, Brussels, Belgium</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="payment-option">
+        <h3>AUD — Wise (Australian Domestic)</h3>
+        <div class="payment-grid">
+          <div class="payment-field">
+            <label>Account Name</label>
+            <p>Nicholas Hurrell</p>
+          </div>
+          <div class="payment-field">
+            <label>BSB</label>
+            <p>774 001</p>
+          </div>
+          <div class="payment-field">
+            <label>Account Number</label>
+            <p>2072 680 14</p>
+          </div>
+          <div class="payment-field">
+            <label>Wise Tag</label>
+            <p>@nicholaschusakh</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 
   <!-- Timeline -->
